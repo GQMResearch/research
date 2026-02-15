@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis: Altura (USDT0 Vault on HyperEVM)</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --green: #22c55e; --red: #ef4444; --yellow: #eab308; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: white; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary); }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: white; }
+        p { margin: 0.75rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: var(--card); border-radius: 0.5rem; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; background: rgba(0,0,0,0.2); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+        code { background: var(--card); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+        blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; color: var(--muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        strong { color: white; }
+        em { color: var(--muted); }
+        .score-5 { color: var(--green); }
+        .score-4 { color: #4ade80; }
+        .score-3 { color: var(--yellow); }
+        .score-2 { color: var(--red); }
+    </style>
+</head>
+<body>
+<h1>Fundamental Analysis: Altura (USDT0 Vault on HyperEVM)</h1>
+<p><strong>Ticker:</strong> AVLT (pre-TGE)
+<strong>Sector:</strong> DeFi — Multi-Strategy Yield Vault
+<strong>Chain:</strong> HyperEVM (Hyperliquid)
+<strong>Analysis Date:</strong> 2026-02-15
+<strong>Analyst:</strong> GQM Research</p>
+<hr>
+<h2>1. Official &amp; Core Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Website</td>
+<td><a href="https://www.altura.trade/">altura.trade</a></td>
+</tr>
+<tr>
+<td>App</td>
+<td><a href="https://app.altura.trade">app.altura.trade</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://docs.altura.trade/">docs.altura.trade</a></td>
+</tr>
+<tr>
+<td>Twitter/X</td>
+<td><a href="https://x.com/alturax">@alturax</a></td>
+</tr>
+<tr>
+<td>Strategies</td>
+<td><a href="https://docs.altura.trade/strategies">docs.altura.trade/strategies</a></td>
+</tr>
+<tr>
+<td>Safety &amp; Protections</td>
+<td><a href="https://docs.altura.trade/safety">docs.altura.trade/safety</a></td>
+</tr>
+<tr>
+<td>Governance</td>
+<td><a href="https://docs.altura.trade/governance">docs.altura.trade/governance</a></td>
+</tr>
+<tr>
+<td>Whitepaper</td>
+<td><a href="https://app.altura.trade/whitepaper.pdf">app.altura.trade/whitepaper.pdf</a></td>
+</tr>
+<tr>
+<td>Merkl Rewards</td>
+<td><a href="https://app.merkl.xyz/">app.merkl.xyz</a></td>
+</tr>
+</tbody></table>
+<h3>Audits</h3>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Date</th>
+<th>Scope</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Adevarlabs</td>
+<td>Dec 2025</td>
+<td>Predeposit contracts</td>
+<td><a href="https://github.com/AlturaTrade/docs/blob/V2/PredepositAudit.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Adevarlabs</td>
+<td>Dec 2025</td>
+<td>Vault contracts</td>
+<td><a href="https://github.com/AlturaTrade/docs/blob/V2/VaultAudit.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Omniscia</td>
+<td>Jan 2026</td>
+<td>NAV contracts</td>
+<td><a href="https://omniscia.io/reports/altura-trade-nav-contracts-6954ecaa2978aa00155d5541">Report</a></td>
+</tr>
+<tr>
+<td>Omniscia</td>
+<td>Jan 2026</td>
+<td>Token &amp; Vesting</td>
+<td><a href="https://omniscia.io/reports/altura-token-vesting-696ec252858422001592f135">Report</a></td>
+</tr>
+<tr>
+<td>Sherlock</td>
+<td>Feb 2026</td>
+<td>Vault (collaborative audit)</td>
+<td><a href="https://sherlock-files.ams3.digitaloceanspaces.com/reports/2026.02.05%20-%20Final%20-%20Altura%20Collaborative%20Audit%20Report%201770301625.pdf">PDF</a></td>
+</tr>
+</tbody></table>
+<p>5 audits across 3 firms including Sherlock (top-tier). Source: <a href="https://docs.altura.trade/audit">docs.altura.trade/audit</a> ✅</p>
+<hr>
+<h2>2. Project Overview</h2>
+<h3>What It Does</h3>
+<p>Altura is a multi-strategy yield vault on HyperEVM (Hyperliquid&#39;s EVM chain). Users deposit USDT0, receive vault shares (AVLT), and the protocol executes institutional-grade trading strategies in the background.</p>
+<p><strong>Key claim:</strong> 20% base APY from execution-based strategies — no token emissions, no farming mechanics.</p>
+<p>Source: <a href="https://docs.altura.trade/">docs.altura.trade</a>, <a href="https://x.com/alturax">@alturax</a></p>
+<h3>How It Works</h3>
+<ol>
+<li>User deposits USDT0 → receives AVLT vault shares</li>
+<li>Altura deploys capital across 3 strategy pillars (see yield sources below)</li>
+<li>NAV/PPS (Price Per Share) updates on-chain — verifiable in real-time</li>
+<li>Yield accrues immediately after deposit</li>
+<li>Withdrawals processed through vault logic</li>
+</ol>
+<p>Source: <a href="https://docs.altura.trade/howitworks">docs.altura.trade/howitworks</a></p>
+<hr>
+<h2>3. ⚠️ Where Does the Yield Come From?</h2>
+<p><strong>This is the critical section.</strong> Altura claims ~20% base APY from 3 strategy pillars. Let&#39;s break each one down:</p>
+<h3>Strategy Pillar 1: Delta-Neutral Crypto Market Making</h3>
+<p><strong>What it does:</strong> Provides bid/ask liquidity on selected venues, capturing spread-based revenue while hedging directional exposure.</p>
+<p><strong>How yield is generated:</strong></p>
+<ul>
+<li>Spread capture from quoting engine (bid-ask differential)</li>
+<li>Liquidity provision fees</li>
+<li>Opportunistic regime-aware adjustments</li>
+</ul>
+<p><strong>Risk controls claimed:</strong></p>
+<ul>
+<li>Inventory exposure limits</li>
+<li>Volatility-based hedging</li>
+<li>Automated kill-switches</li>
+<li>Exchange/venue diversification</li>
+</ul>
+<p><strong>Risk assessment:</strong></p>
+<ul>
+<li>Market making can be very profitable but also risky in volatile conditions ⚠️</li>
+<li>Inventory risk during flash crashes is real — delta-neutral is an ideal, not a guarantee</li>
+<li>&quot;Automated kill-switches&quot; is good but execution during extreme volatility is the real test</li>
+<li><strong>We don&#39;t know which venues they trade on</strong> — could be Hyperliquid perps + other CEXs ⚠️</li>
+</ul>
+<p>Source: <a href="https://docs.altura.trade/strategies">docs.altura.trade/strategies</a></p>
+<h3>Strategy Pillar 2: Funding Rate &amp; Basis Arbitrage</h3>
+<p><strong>What it does:</strong> Captures yield from structural inefficiencies between spot, perp, and dated futures markets. Classic delta-neutral strategy.</p>
+<p><strong>How yield is generated:</strong></p>
+<ul>
+<li>Long spot / short perpetual → collect positive funding rates</li>
+<li>Long perp / short futures → capture basis convergence</li>
+<li>Cross-venue arbitrage</li>
+</ul>
+<p><strong>Risk controls claimed:</strong></p>
+<ul>
+<li>Funding persistence monitoring</li>
+<li>Margin and liquidation buffers</li>
+<li>Position size controls</li>
+<li>Continuous rebalancing</li>
+</ul>
+<p><strong>Risk assessment:</strong></p>
+<ul>
+<li>This is a well-understood, proven strategy (Ethena uses a version of this) ✅</li>
+<li>Works especially well in bull markets when funding rates are elevated</li>
+<li><strong>Risk:</strong> Negative funding periods can erode returns</li>
+<li><strong>Risk:</strong> Liquidation risk if margin buffers are insufficient during extreme moves ⚠️</li>
+<li>Hyperliquid&#39;s on-chain perps give natural access to this trade</li>
+</ul>
+<p>Source: <a href="https://docs.altura.trade/strategies">docs.altura.trade/strategies</a></p>
+<h3>Strategy Pillar 3: Real-World Asset (RWA) Gold Trading</h3>
+<p><strong>What it does:</strong> Asset-backed yield from gold trading activity — appears to involve trading physical/tokenized gold.</p>
+<p><strong>How yield is generated:</strong></p>
+<ul>
+<li>Gold spot/futures arbitrage</li>
+<li>Asset-backed revenue from real economic activity</li>
+</ul>
+<p><strong>Risk assessment:</strong></p>
+<ul>
+<li>Most opaque of the three pillars ⚠️</li>
+<li>Gold market is deep and liquid, which is good</li>
+<li>But details on execution (which venues, what counterparties) are limited</li>
+<li>Diversification benefit: uncorrelated to crypto strategies ✅</li>
+</ul>
+<p>Source: <a href="https://docs.altura.trade/strategies">docs.altura.trade/strategies</a></p>
+<h3>Yield Source Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Estimated Contribution</th>
+<th>Yield Type</th>
+<th>Risk Level</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Market Making</td>
+<td>~33%</td>
+<td>Spread capture, fees</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Funding/Basis Arb</td>
+<td>~33%</td>
+<td>Funding rates, basis</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>RWA Gold</td>
+<td>~33%</td>
+<td>Gold trading revenue</td>
+<td>Medium (opaque)</td>
+</tr>
+</tbody></table>
+<p><strong>Key insight:</strong> The yield is execution-based, NOT emissions-based. No token incentives in the base APY. This is real revenue from trading activity. However, the strategies involve market-making and trading risk — this is NOT a lending vault. It&#39;s closer to depositing with a hedge fund.</p>
+<hr>
+<h2>4. Current APR Breakdown</h2>
+<p>The headline ~75-97% APR consists of:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>APR</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Base vault yield</td>
+<td>~20%</td>
+<td>Trading strategy execution (<a href="https://docs.altura.trade/">docs</a>)</td>
+</tr>
+<tr>
+<td>Merkl pre-TGE bonus</td>
+<td>~55-77%</td>
+<td>Fixed $750K token pool / TVL (<a href="https://app.merkl.xyz/">Merkl</a>, <a href="https://docs.altura.trade/pretge">docs</a>)</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>~75-97%</strong></td>
+<td>Fluctuates inversely with TVL</td>
+</tr>
+</tbody></table>
+<p><strong>⚠️ The Merkl bonus is temporary (ends April 30, 2026).</strong> After that, expect ~20% base only.</p>
+<p><strong>Pre-TGE incentive details:</strong></p>
+<ul>
+<li>Total pool: $750,000 in tokens at $150M FDV</li>
+<li>Duration: 99 days (Jan 21 — Apr 30, 2026)</li>
+<li>Vesting: 30% at TGE, 70% over 6 months linear</li>
+<li>APR inversely proportional to TVL (current TVL ~$3.8M → ~75% bonus)</li>
+</ul>
+<p>Source: <a href="https://docs.altura.trade/pretge">docs.altura.trade/pretge</a></p>
+<hr>
+<h2>5. Team &amp; Backing</h2>
+<h3>Team</h3>
+<ul>
+<li><strong>Anonymous / pseudonymous</strong> ⚠️</li>
+<li>No public team page on website or docs</li>
+<li>No known VC backing or fundraising announcements</li>
+<li>Self-described as &quot;institutional-grade&quot; but no institutional backing disclosed</li>
+</ul>
+<p><strong>This is a significant risk factor.</strong> Unlike YO Protocol (Coinbase Ventures, Foundation Capital), Altura has no disclosed investors or team identity.</p>
+<h3>Funding</h3>
+<ul>
+<li>No disclosed fundraise</li>
+<li>Token FDV assumed at $150M (from pre-TGE incentive docs)</li>
+</ul>
+<p>Source: No public funding information found.</p>
+<hr>
+<h2>6. Key Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TVL</td>
+<td>~$3.8M</td>
+<td><a href="https://app.merkl.xyz/">Merkl</a></td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>HyperEVM</td>
+<td><a href="https://docs.altura.trade/">docs</a></td>
+</tr>
+<tr>
+<td>Base APY target</td>
+<td>~20%</td>
+<td><a href="https://docs.altura.trade/">docs</a>, <a href="https://x.com/alturax">@alturax</a></td>
+</tr>
+<tr>
+<td>Current total APR</td>
+<td>~75-97% (incl. Merkl bonus)</td>
+<td><a href="https://app.merkl.xyz/">Merkl</a></td>
+</tr>
+<tr>
+<td>Deposit asset</td>
+<td>USDT0</td>
+<td>Vault</td>
+</tr>
+<tr>
+<td>Vault token</td>
+<td>AVLT</td>
+<td>Pre-TGE</td>
+</tr>
+<tr>
+<td>Launch date</td>
+<td>Dec 2025 (predeposit), Jan 2026 (main vault)</td>
+<td>X posts</td>
+</tr>
+<tr>
+<td>Audits</td>
+<td>5 across 3 firms</td>
+<td><a href="https://docs.altura.trade/audit">docs</a></td>
+</tr>
+<tr>
+<td>Hacks/Exploits</td>
+<td>None (very new)</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>7. Governance &amp; Security Architecture</h2>
+<p>Altura uses a 3-tier role system (better than most new protocols):</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Can Do</th>
+<th>Cannot Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Guardian</strong></td>
+<td>Pause/unpause vault</td>
+<td>Move funds, change PPS</td>
+</tr>
+<tr>
+<td><strong>Operator</strong></td>
+<td>Submit oracle updates, trigger harvests</td>
+<td>Transfer assets, pause</td>
+</tr>
+<tr>
+<td><strong>Timelock Admin</strong></td>
+<td>Update configs (after delay)</td>
+<td>Bypass timelock, move funds</td>
+</tr>
+</tbody></table>
+<p><strong>Key protections:</strong></p>
+<ul>
+<li>Permissioned transfers only (assets can only go to pre-approved contracts + keeper EOAs) ✅</li>
+<li>Oracle validation with upper/lower bounds ✅</li>
+<li>Enforced pause states ✅</li>
+<li>Timelock on all config changes ✅</li>
+</ul>
+<p>Source: <a href="https://docs.altura.trade/governance">docs.altura.trade/governance</a>, <a href="https://docs.altura.trade/safety">docs.altura.trade/safety</a></p>
+<p><strong>⚠️ Concern:</strong> &quot;Keeper EOAs&quot; are whitelisted — these are externally owned accounts that can receive funds. This means the team can move funds to these addresses. This is standard for trading vaults (they need to move capital to execute strategies) but creates trust dependency.</p>
+<hr>
+<h2>8. Risk Assessment</h2>
+<h3>Smart Contract Risk — 3.5/5</h3>
+<ul>
+<li>5 audits from 3 firms including Sherlock ✅</li>
+<li>Strong for a new protocol</li>
+<li>But very young contracts — real-world battle-testing is minimal ⚠️</li>
+<li>Source: <a href="https://docs.altura.trade/audit">docs.altura.trade/audit</a></li>
+</ul>
+<h3>Team/Counterparty Risk — 2/5</h3>
+<ul>
+<li><strong>Anonymous team</strong> — biggest red flag ⚠️</li>
+<li>No disclosed investors or backing</li>
+<li>No public track record</li>
+<li>You&#39;re trusting unknown operators to trade your money</li>
+<li>Keeper EOAs can receive funds — requires trust</li>
+</ul>
+<h3>Yield Source Risk — 3/5</h3>
+<ul>
+<li>Strategies are real and well-described (market making, funding arb, gold) ✅</li>
+<li>No emissions or ponzi mechanics ✅</li>
+<li>But these are <strong>active trading strategies</strong> — not passive lending</li>
+<li>Market making can lose money in volatile conditions ⚠️</li>
+<li>Gold strategy is the most opaque ⚠️</li>
+<li>20% base APY is ambitious — sustainable long-term? TBD</li>
+<li>No track record to verify claimed returns over full market cycle</li>
+</ul>
+<h3>Chain Risk — 3/5</h3>
+<ul>
+<li>HyperEVM is new (launched 2025) ⚠️</li>
+<li>Hyperliquid ecosystem is growing fast but still young</li>
+<li>Single-chain deployment — no diversification</li>
+<li>Benefit: native access to Hyperliquid perps for funding arb</li>
+</ul>
+<h3>Concentration Risk — 2.5/5</h3>
+<ul>
+<li>Single vault, single chain, single team</li>
+<li>All strategies run by same operator</li>
+<li>No diversification across managers</li>
+</ul>
+<h3>Overall Risk Score: 2.8/5</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>3.5/5</td>
+<td>5 audits, Sherlock included, but very new</td>
+</tr>
+<tr>
+<td>Team/Counterparty</td>
+<td>2/5</td>
+<td>Anonymous, no backing, trust-dependent</td>
+</tr>
+<tr>
+<td>Yield Source</td>
+<td>3/5</td>
+<td>Real strategies, but active trading risk</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>3/5</td>
+<td>HyperEVM is young</td>
+</tr>
+<tr>
+<td>Concentration</td>
+<td>2.5/5</td>
+<td>Single everything</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>2.8/5</strong></td>
+<td>Higher risk — size positions accordingly</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>9. Summary</h2>
+<h3>Strengths</h3>
+<ol>
+<li><strong>Real yield sources</strong> — market making, funding arb, gold trading. No emissions. (<a href="https://docs.altura.trade/strategies">docs</a>)</li>
+<li><strong>5 audits including Sherlock</strong> — unusually thorough for a new protocol (<a href="https://docs.altura.trade/audit">docs</a>)</li>
+<li><strong>Strong governance architecture</strong> — timelocked admin, separated roles, permissioned transfers (<a href="https://docs.altura.trade/governance">docs</a>)</li>
+<li><strong>On-chain verifiability</strong> — NAV/PPS observable in real-time (<a href="https://docs.altura.trade/verifiability">docs</a>)</li>
+<li><strong>No leverage looping or circular incentives</strong> — sustainable model claim</li>
+<li><strong>Pre-TGE bonus</strong> — 30% at TGE + 6mo vest aligns incentives (<a href="https://docs.altura.trade/pretge">docs</a>)</li>
+</ol>
+<h3>Weaknesses</h3>
+<ol>
+<li><strong>Anonymous team</strong> — no known identities, no disclosed investors ⚠️⚠️</li>
+<li><strong>Very new</strong> — main vault live since ~Dec 2025, &lt;3 months track record</li>
+<li><strong>Active trading risk</strong> — market making can lose money, this is not lending</li>
+<li><strong>HyperEVM chain risk</strong> — young chain, less battle-tested infrastructure</li>
+<li><strong>Keeper EOA trust</strong> — team-controlled addresses can receive vault funds</li>
+<li><strong>20% base APY sustainability</strong> — unproven over full market cycle</li>
+<li><strong>Gold strategy opacity</strong> — least transparent of the three pillars</li>
+<li><strong>$3.8M TVL</strong> — very small, liquidity risk on exits</li>
+</ol>
+<h3>Verdict</h3>
+<p>Altura is an interesting protocol with genuinely differentiated yield strategies (not another lending aggregator). The audit coverage is surprisingly strong for its size. However, the <strong>anonymous team + active trading strategies + very new chain</strong> create a risk profile that demands careful position sizing.</p>
+<p><strong>The 75-97% headline APR is misleading</strong> — ~55-77% of that is temporary Merkl pre-TGE incentives ending April 30. The real question is whether the 20% base APY from trading strategies is sustainable.</p>
+<p><strong>Suitable for:</strong> Small, speculative allocations only. Not for core positions.
+<strong>Position sizing:</strong> Max 2-5% of stablecoin portfolio given risk profile.
+<strong>Monitor:</strong> NAV/PPS trends on-chain, team doxxing updates, post-April APY when incentives end.</p>
+<hr>
+<p><em>Report by GQM Research for Yieldschool</em>
+<em>Sources: docs.altura.trade, x.com/@alturax, Merkl, Sherlock audit reports</em></p>
+
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;">
+    <p>Generated by Geoff for Yieldschool Research</p>
+</footer>
+</body>
+</html>
