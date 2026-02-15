@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis: Morpho</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --green: #22c55e; --red: #ef4444; --yellow: #eab308; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: white; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary); }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: white; }
+        p { margin: 0.75rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: var(--card); border-radius: 0.5rem; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; background: rgba(0,0,0,0.2); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+        code { background: var(--card); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+        blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; color: var(--muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        strong { color: white; }
+        em { color: var(--muted); }
+        .score-5 { color: var(--green); }
+        .score-4 { color: #4ade80; }
+        .score-3 { color: var(--yellow); }
+        .score-2 { color: var(--red); }
+    </style>
+</head>
+<body>
+<h1>Fundamental Analysis: Morpho</h1>
+<p><strong>Ticker:</strong> MORPHO<br><strong>Sector:</strong> DeFi - Lending/Borrowing<br><strong>Analysis Date:</strong> 2026-02-09<br><strong>Analyst:</strong> Aipa (for Yieldschool)</p>
+<hr>
+<h2>1. Official &amp; Core Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Website</td>
+<td><a href="https://morpho.org">https://morpho.org</a></td>
+</tr>
+<tr>
+<td>Twitter/X</td>
+<td><a href="https://twitter.com/MorphoLabs">https://twitter.com/MorphoLabs</a></td>
+</tr>
+<tr>
+<td>Discord</td>
+<td><a href="https://discord.morpho.org">https://discord.morpho.org</a></td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a href="https://github.com/morpho-org">https://github.com/morpho-org</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://docs.morpho.org">https://docs.morpho.org</a></td>
+</tr>
+<tr>
+<td>CoinGecko</td>
+<td><a href="https://coingecko.com/en/coins/morpho">https://coingecko.com/en/coins/morpho</a></td>
+</tr>
+<tr>
+<td>DeFiLlama</td>
+<td><a href="https://defillama.com/protocol/morpho">https://defillama.com/protocol/morpho</a></td>
+</tr>
+<tr>
+<td>Token Terminal</td>
+<td><a href="https://tokenterminal.com/terminal/projects/morpho">https://tokenterminal.com/terminal/projects/morpho</a></td>
+</tr>
+</tbody></table>
+<h3>Audits</h3>
+<p>Full audit list: <a href="https://docs.morpho.org/get-started/resources/audits/">docs.morpho.org/audits</a></p>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://spearbit.com/">Spearbit</a></td>
+<td>Morpho V1, V2, Vaults</td>
+<td><a href="https://github.com/morpho-org/morpho-blue/tree/main/audits">GitHub Reports</a></td>
+</tr>
+<tr>
+<td><a href="https://www.openzeppelin.com/">OpenZeppelin</a></td>
+<td>Morpho V1, Periphery</td>
+<td><a href="https://github.com/morpho-org/morpho-blue/tree/main/audits">GitHub Reports</a></td>
+</tr>
+<tr>
+<td><a href="https://www.chainsecurity.com/">ChainSecurity</a></td>
+<td>Vaults V2</td>
+<td><a href="https://github.com/morpho-org/vault-v2/tree/main/audits">GitHub Reports</a></td>
+</tr>
+<tr>
+<td><a href="https://www.zellic.io/">Zellic</a></td>
+<td>Vaults V2</td>
+<td><a href="https://github.com/morpho-org/vault-v2/tree/main/audits">GitHub Reports</a></td>
+</tr>
+<tr>
+<td><a href="https://cantina.xyz/">Cantina Contest</a></td>
+<td>Morpho V1, Periphery</td>
+<td><a href="https://cantina.xyz/competitions/d86b7f95-e574-4092-8ea2-78dcac2f54f1">Competition Results</a></td>
+</tr>
+<tr>
+<td><a href="https://www.certora.com/">Certora</a></td>
+<td>Formal Verification</td>
+<td><a href="https://github.com/morpho-org/vault-v2/tree/main/audits">GitHub Reports</a></td>
+</tr>
+</tbody></table>
+<p><strong>Audit Assessment:</strong> ✅ Extensively audited by 6+ top-tier firms. One of the most audited protocols in DeFi.</p>
+<hr>
+<h2>2. Project Overview</h2>
+<h3>What It Does</h3>
+<p>Morpho is a permissionless lending protocol that allows anyone to create isolated lending markets and earn yield. It operates on two layers:</p>
+<ol>
+<li><strong>Morpho Blue</strong> — Immutable base layer for creating isolated lending markets</li>
+<li><strong>Morpho Vaults</strong> — Curated vaults that aggregate liquidity across markets for easier UX</li>
+</ol>
+<h3>Key Innovation</h3>
+<ul>
+<li><strong>Isolated markets</strong> — Each market has one loan asset, one collateral asset, one oracle, one LLTV. Risks are contained.</li>
+<li><strong>Immutable contracts</strong> — Cannot be changed after deployment, reducing governance risk</li>
+<li><strong>Better rates</strong> — Direct lender-borrower matching narrows the spread vs. traditional pools</li>
+</ul>
+<h3>Roadmap</h3>
+<p><strong>Delivered:</strong></p>
+<ul>
+<li>Morpho Optimizer (on Aave/Compound) — 2022</li>
+<li>Morpho Blue mainnet — 2024</li>
+<li>Multi-chain expansion (Base, Arbitrum, 20+ chains) — 2024-2025</li>
+<li>MORPHO token launch — Nov 2024</li>
+<li>Morpho Vaults V2 — 2025</li>
+</ul>
+<p><strong>Current/Upcoming:</strong></p>
+<ul>
+<li>Further L2/chain expansion</li>
+<li>Fee switch activation (governance decision pending)</li>
+<li>Cross-chain token interoperability</li>
+</ul>
+<h3>Team</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Background</th>
+<th>Doxxed?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CEO/Co-founder</td>
+<td>Paul Frambot</td>
+<td>Built Morpho during engineering studies, raised $18M from a16z while in school</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Co-founders</td>
+<td>Multiple</td>
+<td>Engineering background</td>
+<td>✅ Yes</td>
+</tr>
+</tbody></table>
+<p><strong>Track Record:</strong> Young but highly credentialed team. Paul Frambot notably raised seed funding while still a student, then $18M Series A from a16z and Variant. Protocol has scaled to $6B+ TVL without major incidents.</p>
+<h3>Sector &amp; Competition</h3>
+<p><strong>Category:</strong> DeFi Lending<br><strong>Market Size:</strong> ~$30B+ DeFi lending TVL  </p>
+<p><strong>Main Competitors:</strong></p>
+<ul>
+<li>Aave ($15B TVL) — Pool-based, governance heavy</li>
+<li>Compound ($3B TVL) — Pool-based, legacy</li>
+<li>Euler ($500M TVL) — Isolated markets, similar approach</li>
+<li>Fluid ($1B+ TVL) — Newer entrant</li>
+</ul>
+<p><strong>Macro Tailwinds:</strong></p>
+<ul>
+<li>Growing demand for permissionless, trustless lending</li>
+<li>L2 expansion = more deployment opportunities</li>
+<li>Institutional interest in DeFi (Coinbase integration)</li>
+</ul>
+<p><strong>Macro Headwinds:</strong></p>
+<ul>
+<li>Regulatory uncertainty on DeFi lending</li>
+<li>Competition from CeFi rates</li>
+<li>Smart contract risk perception</li>
+</ul>
+<hr>
+<h2>3. How It Works (User Perspective)</h2>
+<h3>High-Level Explanation</h3>
+<ol>
+<li><strong>Lenders</strong> deposit assets into Morpho Vaults (curated) or directly into Morpho Markets (advanced)</li>
+<li><strong>Borrowers</strong> deposit collateral and borrow against it in isolated markets</li>
+<li><strong>Curators</strong> create and manage vaults that aggregate markets with similar risk profiles</li>
+<li><strong>Market Creators</strong> can permissionlessly deploy new lending markets</li>
+</ol>
+<h3>User Roles &amp; Incentives</h3>
+<h4>Lenders</h4>
+<ul>
+<li><strong>Actions:</strong> Deposit into vaults or markets</li>
+<li><strong>Incentives:</strong> Earn interest from borrowers + potential MORPHO rewards</li>
+<li><strong>Risks:</strong> Smart contract risk, oracle risk, borrower defaults (isolated per market)</li>
+</ul>
+<h4>Borrowers</h4>
+<ul>
+<li><strong>Actions:</strong> Deposit collateral, borrow assets</li>
+<li><strong>Incentives:</strong> Access liquidity, higher LTVs than competitors</li>
+<li><strong>Risks:</strong> Liquidation if collateral value drops</li>
+</ul>
+<h4>Curators (Vault Managers)</h4>
+<ul>
+<li><strong>Actions:</strong> Create vaults, select which markets to include, set allocation</li>
+<li><strong>Incentives:</strong> Can charge performance fees, build reputation</li>
+<li><strong>Risks:</strong> Reputational risk if vault underperforms</li>
+</ul>
+<h4>Governance Participants</h4>
+<ul>
+<li><strong>Actions:</strong> Vote on protocol parameters, fee switch, token distributions</li>
+<li><strong>Incentives:</strong> Shape protocol direction</li>
+<li><strong>Risks:</strong> Low participation = centralized decisions</li>
+</ul>
+<hr>
+<h2>4. Financials &amp; Economics</h2>
+<h3>Revenue Sources</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Current Level</th>
+<th>Who Captures It?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Protocol fees</td>
+<td><strong>$0</strong> (fee switch OFF)</td>
+<td>N/A currently</td>
+</tr>
+<tr>
+<td>Interest spread</td>
+<td>Goes to lenders</td>
+<td>Lenders</td>
+</tr>
+<tr>
+<td>Vault curator fees</td>
+<td>Variable</td>
+<td>Curators</td>
+</tr>
+</tbody></table>
+<p><strong>Key Note:</strong> Morpho currently generates <strong>ZERO protocol revenue</strong>. There is a fee switch that can be activated via governance, but it has not been turned on. This is a growth-first strategy similar to early Uniswap.</p>
+<h3>Operating Expenses</h3>
+<table>
+<thead>
+<tr>
+<th>Cost Type</th>
+<th>Estimate</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MORPHO incentives</td>
+<td>Variable</td>
+<td>Distributed to users via governance</td>
+</tr>
+<tr>
+<td>Team/development</td>
+<td>Funded by treasury + VC</td>
+<td>Morpho Association</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Minimal</td>
+<td>Immutable contracts = low maintenance</td>
+</tr>
+</tbody></table>
+<h3>Tokenomics</h3>
+<p><strong>Supply:</strong></p>
+<ul>
+<li>Max Supply: 1,000,000,000 MORPHO</li>
+<li>Circulating Supply: <del>378M (</del>38%)</li>
+<li>Fully unlocked by: ~2029</li>
+</ul>
+<p><strong>Allocation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>%</th>
+<th>Vesting</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Morpho Governance (DAO)</td>
+<td>35.4%</td>
+<td>Controlled by token holders</td>
+</tr>
+<tr>
+<td>Strategic Partners</td>
+<td>27.5%</td>
+<td>Various schedules, mostly by Oct 2025-Nov 2027</td>
+</tr>
+<tr>
+<td>Founders</td>
+<td>15.2%</td>
+<td>Relocked, vests by May 2028</td>
+</tr>
+<tr>
+<td>Morpho Association</td>
+<td>6.3%</td>
+<td>Ecosystem development</td>
+</tr>
+<tr>
+<td>Reserve for Contributors</td>
+<td>5.8%</td>
+<td>Future contributors</td>
+</tr>
+<tr>
+<td>Users &amp; Launch Pools</td>
+<td>4.9%</td>
+<td>Distributed as rewards</td>
+</tr>
+</tbody></table>
+<p><strong>Emissions:</strong></p>
+<ul>
+<li>No fixed inflation schedule</li>
+<li>Distributions decided by governance</li>
+<li>Founders voluntarily relocked tokens (bullish signal)</li>
+</ul>
+<p><strong>Value Accrual:</strong></p>
+<ul>
+<li><strong>Fee switch:</strong> EXISTS but OFF — can be activated per-market via governance</li>
+<li><strong>Revenue share:</strong> When activated, fees go to DAO treasury</li>
+<li><strong>Burn mechanism:</strong> None</li>
+<li><strong>Buyback program:</strong> None currently</li>
+</ul>
+<hr>
+<h2>5. Security &amp; Risk Profile</h2>
+<h3>Economic Attack Vectors</h3>
+<table>
+<thead>
+<tr>
+<th>Vector</th>
+<th>Risk Level</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Flash loan exploits</td>
+<td>Low</td>
+<td>Isolated markets contain damage</td>
+</tr>
+<tr>
+<td>Oracle manipulation</td>
+<td>Medium</td>
+<td>Market creators choose oracles; Chainlink common</td>
+</tr>
+<tr>
+<td>Governance attacks</td>
+<td>Low</td>
+<td>Timelock + high quorum requirements</td>
+</tr>
+<tr>
+<td>Liquidation cascades</td>
+<td>Low</td>
+<td>Isolated markets = no systemic contagion</td>
+</tr>
+</tbody></table>
+<h3>Access Control &amp; Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Details</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Contract upgradeability</td>
+<td><strong>Immutable</strong> (Morpho Blue)</td>
+<td>✅ Very low</td>
+</tr>
+<tr>
+<td>Oracle dependency</td>
+<td>Per-market (usually Chainlink)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Admin keys</td>
+<td>Minimal — governance controlled</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Multisig</td>
+<td>DAO treasury</td>
+<td>Standard</td>
+</tr>
+</tbody></table>
+<h3>Risk Score</h3>
+<p><strong>Overall Risk Score: 4.5/5</strong> (Very Low Risk)</p>
+<p>Morpho is one of the safest DeFi lending protocols due to:</p>
+<ul>
+<li>Immutable contracts</li>
+<li>Isolated markets</li>
+<li>Extensive audits (6+ firms)</li>
+<li>No major exploits to date</li>
+<li>Conservative approach (no fee extraction yet)</li>
+</ul>
+<hr>
+<h2>6. Investors &amp; Funding</h2>
+<h3>Funding Rounds</h3>
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Date</th>
+<th>Amount</th>
+<th>Lead Investor</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Seed</td>
+<td>2021</td>
+<td>$1M</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>Jul 2022</td>
+<td>$18M</td>
+<td>a16z, Variant</td>
+<td><a href="https://www.coindesk.com/business/2022/07/12/a16z-variant-lead-18m-round-for-lending-protocol-morpho-labs">CoinDesk</a></td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>Aug 2024</td>
+<td>$50M</td>
+<td>Ribbit Capital</td>
+<td><a href="https://www.coindesk.com/business/2024/08/01/crypto-lending-firm-morpho-bags-50m-in-funding-round-led-by-ribbit-capital">CoinDesk</a></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>$73.6M</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>Notable Backers</h3>
+<ul>
+<li><a href="https://morpho.org/blog/morpho-raises-18m-co-led-by-a16z-and-variant-to-transform-decentralized-lending/">Andreessen Horowitz (a16z)</a> — Series A co-lead</li>
+<li><a href="https://www.coindesk.com/business/2024/08/01/crypto-lending-firm-morpho-bags-50m-in-funding-round-led-by-ribbit-capital">Ribbit Capital</a> — Series B lead</li>
+<li><a href="https://cointelegraph.com/news/morpho-secures-50-million-funding-ribbit-capital-onchain-lending">Pantera Capital</a> — Series B participant</li>
+<li><a href="https://cointelegraph.com/news/morpho-secures-50-million-funding-ribbit-capital-onchain-lending">Coinbase Ventures</a> — Series B participant</li>
+<li><a href="https://morpho.org/blog/morpho-raises-18m-co-led-by-a16z-and-variant-to-transform-decentralized-lending/">Variant</a> — Series A co-lead</li>
+</ul>
+<p><strong>Assessment:</strong> Tier-1 investor lineup. Strong strategic backing from Coinbase (explains deep integration).</p>
+<h3>Token Launch</h3>
+<ul>
+<li><strong>Type:</strong> Airdrop + trading enabled Nov 2024</li>
+<li><strong>Initial Price:</strong> ~$1.50-2.00</li>
+<li><strong>ATH:</strong> $4.17 (Jan 2025)</li>
+<li><strong>Current Price:</strong> ~$1.11</li>
+<li><strong>Change from ATH:</strong> -73%</li>
+</ul>
+<hr>
+<h2>7. Community &amp; Social Signals</h2>
+<h3>Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Twitter followers</td>
+<td>100K+</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Discord members</td>
+<td>Active</td>
+<td>Good engagement</td>
+</tr>
+<tr>
+<td>GitHub contributors</td>
+<td>50+</td>
+<td>Very active</td>
+</tr>
+<tr>
+<td>GitHub commits (30d)</td>
+<td>High</td>
+<td>Continuous development</td>
+</tr>
+</tbody></table>
+<h3>Sentiment Assessment</h3>
+<p><strong>Community Quality:</strong> 4/5 — Technical, informed community<br><strong>Developer Activity:</strong> 5/5 — Very active development<br><strong>Team Communication:</strong> 4/5 — Regular updates, transparent  </p>
+<p><strong>Red Flags:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Excessive shilling — No</li>
+<li><input disabled="" type="checkbox"> Poor team communication — No</li>
+<li><input disabled="" type="checkbox"> Fake engagement — No</li>
+<li><input checked="" disabled="" type="checkbox"> Token down 73% from ATH — Market-wide, not Morpho-specific</li>
+</ul>
+<hr>
+<h2>8. Summary &amp; Verdict</h2>
+<h3>Strengths</h3>
+<ol>
+<li><strong>Best-in-class security</strong> — Immutable contracts, isolated markets, 6+ audits</li>
+<li><strong>Top-tier backing</strong> — a16z, Pantera, Coinbase with deep integrations</li>
+<li><strong>Rapid growth</strong> — $6B TVL, 20+ chains, institutional adoption</li>
+<li><strong>No protocol fees yet</strong> — Growth-first strategy, upside when fee switch activates</li>
+<li><strong>Young but proven team</strong> — Shipped consistently, no major incidents</li>
+</ol>
+<h3>Weaknesses</h3>
+<ol>
+<li><strong>No revenue</strong> — Fee switch not activated, no cash flow currently</li>
+<li><strong>Token down significantly</strong> — 73% off ATH (though market-wide)</li>
+<li><strong>Competition</strong> — Aave still dominates mindshare</li>
+<li><strong>Complexity</strong> — Isolated markets can be confusing for retail</li>
+</ol>
+<h3>Investment Thesis</h3>
+<p><strong>Bull Case:</strong></p>
+<ul>
+<li>Fee switch activation = instant revenue generation</li>
+<li>Coinbase + institutional adoption continues</li>
+<li>Becomes the &quot;Uniswap of lending&quot; — dominant infrastructure layer</li>
+<li>Token re-rates when revenue materializes</li>
+<li>Multi-chain expansion captures new markets</li>
+</ul>
+<p><strong>Bear Case:</strong></p>
+<ul>
+<li>Fee switch never activated / delayed</li>
+<li>Competition from Aave v4, Euler, Fluid</li>
+<li>Regulatory crackdown on DeFi lending</li>
+<li>Token inflation from vesting unlocks through 2027-2029</li>
+</ul>
+<h3>Final Rating</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score (1-5)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Team</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tokenomics</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.4/5</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Verdict:</strong> Morpho is a <strong>high-quality protocol</strong> with best-in-class security and strong institutional backing. The main concern is lack of current revenue (fee switch off) and significant token unlock ahead. For <strong>yield farmers</strong>, Morpho vaults are safe and competitive. For <strong>token investors</strong>, the thesis depends on fee switch activation and continued growth. Watch for governance proposals around fee activation.</p>
+<hr>
+<p><em>Report generated by Geoff for Yieldschool Research</em></p>
+
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;">
+    <p>Generated by Geoff for Yieldschool Research</p>
+</footer>
+</body>
+</html>

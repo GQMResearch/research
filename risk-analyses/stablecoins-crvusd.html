@@ -1,0 +1,143 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>stablecoins-crvusd</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>crvUSD</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> CDP stablecoin with LLAMMA</li>
+<li><strong>Issuer:</strong> Curve Finance</li>
+<li><strong>Backing:</strong> Over-collateralized crypto</li>
+<li><strong>Market Cap:</strong> ~$500M+</li>
+<li><strong>Chains:</strong> Ethereum (native)</li>
+<li><strong>Website:</strong> <a href="https://crvusd.curve.fi">https://crvusd.curve.fi</a></li>
+</ul>
+<h2>Mechanism</h2>
+<h3>LLAMMA (Lending-Liquidating AMM Algorithm)</h3>
+<ul>
+<li>Unique &quot;soft liquidation&quot; mechanism</li>
+<li>As collateral value drops, gradually converts to crvUSD</li>
+<li>When price recovers, converts back to collateral</li>
+<li>Reduces hard liquidation risk</li>
+</ul>
+<h3>How It Differs from DAI</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>crvUSD</th>
+<th>DAI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Liquidation</td>
+<td>Soft (gradual)</td>
+<td>Hard (instant)</td>
+</tr>
+<tr>
+<td>Collateral</td>
+<td>More volatile assets OK</td>
+<td>Conservative</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>Internal LLAMMA</td>
+<td>Chainlink</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>2023</td>
+<td>2017</td>
+</tr>
+</tbody></table>
+<h2>Backing &amp; Reserves</h2>
+<h3>Collateral Types</h3>
+<ul>
+<li>ETH and ETH LSDs</li>
+<li>WBTC</li>
+<li>Other approved collateral</li>
+<li>Over-collateralized design</li>
+</ul>
+<h3>Peg Mechanism</h3>
+<ul>
+<li>PegKeepers maintain peg</li>
+<li>Can mint/burn to stabilize</li>
+<li>Arbitrage incentives</li>
+</ul>
+<h2>Risk Factors</h2>
+<h3>Strengths</h3>
+<ul>
+<li>Innovative liquidation mechanism</li>
+<li>Curve&#39;s security track record</li>
+<li>Multiple audits (ChainSecurity, MixBytes)</li>
+<li>Growing adoption</li>
+</ul>
+<h3>Risks</h3>
+<ol>
+<li><strong>Novel Mechanism:</strong> LLAMMA is new, less battle-tested</li>
+<li><strong>Soft Liquidation Loss:</strong> Can still lose value in volatility</li>
+<li><strong>Oracle Risk:</strong> Internal oracle design</li>
+<li><strong>Newer:</strong> ~2 years vs DAI&#39;s 7 years</li>
+</ol>
+<h3>LLAMMA Risks</h3>
+<ul>
+<li>Soft liquidation still results in losses</li>
+<li>&quot;De-liquidation&quot; isn&#39;t guaranteed</li>
+<li>Complex mechanism may have edge cases</li>
+</ul>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Backing</td>
+<td>4/5</td>
+<td>Over-collateralized, innovative mechanism</td>
+</tr>
+<tr>
+<td>Peg Stability</td>
+<td>4/5</td>
+<td>Good track record, PegKeepers work</td>
+</tr>
+<tr>
+<td>Issuer</td>
+<td>4.5/5</td>
+<td>Curve - excellent reputation</td>
+</tr>
+<tr>
+<td>Censorship Resistance</td>
+<td>4.5/5</td>
+<td>Decentralized</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>crvUSD brings innovation to CDP stablecoins with LLAMMA&#39;s soft liquidation. Backed by Curve&#39;s excellent security track record and multiple audits. Less battle-tested than DAI but showing strong performance. Good for yield strategies where Curve integration provides benefits.</p>
+<h2>References</h2>
+<ul>
+<li>Docs: <a href="https://docs.curve.fi/crvUSD/">https://docs.curve.fi/crvUSD/</a></li>
+<li>Audits: <a href="https://docs.curve.fi/security/security/#stablecoin-and-lending">https://docs.curve.fi/security/security/#stablecoin-and-lending</a></li>
+<li>Dashboard: <a href="https://crvusd.curve.fi">https://crvusd.curve.fi</a></li>
+</ul>
+</body></html>

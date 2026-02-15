@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>protocols-curve</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>Curve Finance</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> DEX / Stablecoin Issuer (crvUSD)</li>
+<li><strong>Chains:</strong> Ethereum, Arbitrum, Base, Polygon, Optimism, many more</li>
+<li><strong>TVL:</strong> ~$2B+</li>
+<li><strong>Live Since:</strong> January 2020</li>
+<li><strong>Website:</strong> <a href="https://curve.finance">https://curve.finance</a></li>
+<li><strong>Docs:</strong> <a href="https://docs.curve.fi">https://docs.curve.fi</a></li>
+</ul>
+<h2>Smart Contract Security</h2>
+<h3>Audits</h3>
+<p>Curve is one of the most audited protocols in DeFi:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Auditor</th>
+<th>Date</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DAO Contracts</td>
+<td>Trail of Bits</td>
+<td>July 2020</td>
+<td><a href="https://docs.curve.fi/assets/pdf/audits/curve-dao-ToB-final.pdf">Link</a></td>
+</tr>
+<tr>
+<td>DAO Contracts</td>
+<td>Quantstamp</td>
+<td>August 2020</td>
+<td><a href="https://docs.curve.fi/assets/pdf/audits/curve-dao-quantstamp.pdf">Link</a></td>
+</tr>
+<tr>
+<td>Metapools</td>
+<td>Quantstamp</td>
+<td>October 2020</td>
+<td><a href="https://docs.curve.fi/assets/pdf/audits/CurveMetapoolAudit.pdf">Link</a></td>
+</tr>
+<tr>
+<td>ETH/sETH Pool</td>
+<td>ChainSecurity</td>
+<td>September 2021</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Stableswap-NG</td>
+<td>MixBytes</td>
+<td>September 2021</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Tricrypto</td>
+<td>ChainSecurity</td>
+<td>September 2021</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Tricrypto-NG</td>
+<td>ChainSecurity</td>
+<td>June 2023</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>crvUSD</td>
+<td>MixBytes</td>
+<td>June 2023</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>crvUSD</td>
+<td>ChainSecurity</td>
+<td>January 2024</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>crvUSD</td>
+<td>ChainSecurity</td>
+<td>February 2025</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Curve Lending</td>
+<td>StateMind</td>
+<td>February 2024</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>scrvUSD</td>
+<td>ChainSecurity</td>
+<td>December 2024</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>FeeSplitter</td>
+<td>ChainSecurity</td>
+<td>September 2024</td>
+<td>Available</td>
+</tr>
+</tbody></table>
+<h3>Bug Bounty</h3>
+<ul>
+<li><strong>Platform:</strong> Direct via <a href="mailto:security@curve.finance">security@curve.finance</a></li>
+<li><strong>Max Payout:</strong> $250,000 for critical vulnerabilities</li>
+<li><strong>Scope:</strong> Smart contracts leading to substantial loss of funds</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Payout Range</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Critical (Almost Certain + High)</td>
+<td>$250,000</td>
+</tr>
+<tr>
+<td>High (Almost Certain + Moderate)</td>
+<td>$50,000</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>$1,000 - $10,000</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>$250 - $1,000</td>
+</tr>
+</tbody></table>
+<h3>Incidents</h3>
+<ul>
+<li><strong>July 2023:</strong> Vyper compiler vulnerability affected some pools (~$70M drained across ecosystem). Not a Curve contract bug but compiler issue. Curve responded quickly with patches.</li>
+<li>Funds partially recovered. Protocol has continued operating safely since.</li>
+</ul>
+<h3>Upgradeability</h3>
+<ul>
+<li>DAO-controlled governance</li>
+<li>Timelocks on critical changes</li>
+<li>Emergency DAO exists for rapid response</li>
+</ul>
+<h2>Protocol &amp; Team</h2>
+<h3>Team</h3>
+<ul>
+<li><strong>Founder:</strong> Michael Egorov (doxxed, PhD in Physics)</li>
+<li>Known, respected team with long track record</li>
+<li>Active development since 2020</li>
+</ul>
+<h3>Governance</h3>
+<ul>
+<li>veCRV (vote-escrowed CRV) governance model</li>
+<li>DAO-controlled parameters</li>
+<li>Time-weighted voting power</li>
+<li>Emergency DAO for urgent responses</li>
+</ul>
+<h3>Backing</h3>
+<ul>
+<li>Early VC backing but now community-governed</li>
+<li>Self-sustaining via trading fees</li>
+<li>Large treasury</li>
+</ul>
+<h2>Economic Model</h2>
+<h3>Yield Source</h3>
+<ul>
+<li>Trading fees (0.04% on stableswap pools)</li>
+<li>CRV emissions (decreasing over time)</li>
+<li>For crvUSD: borrowing interest</li>
+</ul>
+<h3>Token (CRV)</h3>
+<ul>
+<li>Governance and yield boosting</li>
+<li>Emissions decreasing following a set schedule</li>
+<li>veCRV lockup mechanism aligns incentives</li>
+</ul>
+<h3>Sustainability</h3>
+<ul>
+<li>Fee switch active - real yield from fees</li>
+<li>crvUSD generates protocol revenue</li>
+<li>Emissions reduced over time</li>
+</ul>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>5/5</td>
+<td>Extensively audited, battle-tested, one compiler incident handled well</td>
+</tr>
+<tr>
+<td>Protocol/Team</td>
+<td>5/5</td>
+<td>Doxxed founder, strong governance, long track record</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>4/5</td>
+<td>Real yield from fees, some emission dependency remains</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>5/5</td>
+<td>Primarily Ethereum mainnet</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.5/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>Curve is a cornerstone of DeFi infrastructure with exceptional security practices. Multiple audits from top firms (Trail of Bits, ChainSecurity, Quantstamp), active bug bounty, and years of battle-testing. The 2023 Vyper incident was a compiler bug, not a Curve design flaw, and was handled professionally. One of the safest protocols in DeFi for stablecoin trading and yield.</p>
+<h2>References</h2>
+<ul>
+<li>Security Docs: <a href="https://docs.curve.fi/security/security/">https://docs.curve.fi/security/security/</a></li>
+<li>Governance: <a href="https://dao.curve.fi">https://dao.curve.fi</a></li>
+<li>GitHub: <a href="https://github.com/curvefi">https://github.com/curvefi</a></li>
+</ul>
+</body></html>

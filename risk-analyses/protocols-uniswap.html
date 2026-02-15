@@ -1,0 +1,231 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>protocols-uniswap</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>Uniswap</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> DEX (AMM)</li>
+<li><strong>Chains:</strong> Ethereum, Arbitrum, Base, Polygon, Optimism, BNB, many more</li>
+<li><strong>TVL:</strong> ~$5B+</li>
+<li><strong>Live Since:</strong> V1 November 2018, V2 May 2020, V3 May 2021, V4 2024</li>
+<li><strong>Website:</strong> <a href="https://uniswap.org">https://uniswap.org</a></li>
+<li><strong>Docs:</strong> <a href="https://docs.uniswap.org">https://docs.uniswap.org</a></li>
+</ul>
+<h2>Smart Contract Security</h2>
+<h3>Audits</h3>
+<h4>Uniswap V3</h4>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Date</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Trail of Bits</td>
+<td>March 2021</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>ABDK</td>
+<td>March 2021</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>samczsun</td>
+<td>Personal review</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+<h4>Uniswap V4</h4>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Date</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenZeppelin</td>
+<td>2024</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Trail of Bits</td>
+<td>2024</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Spearbit</td>
+<td>2024</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Code4rena Contest</td>
+<td>2024</td>
+<td>Available</td>
+</tr>
+</tbody></table>
+<h3>Bug Bounty</h3>
+<ul>
+<li><strong>Platform:</strong> Immunefi + direct program</li>
+<li><strong>Max Payout:</strong> $3,000,000+ for critical vulnerabilities</li>
+<li><strong>Status:</strong> One of the largest bounties in DeFi</li>
+<li><strong>Scope:</strong> All core contracts</li>
+</ul>
+<h3>Incidents</h3>
+<ul>
+<li>No major exploits on core contracts</li>
+<li>Some frontend/router issues (contained quickly)</li>
+<li>Exemplary security record for 6+ years</li>
+</ul>
+<h3>Upgradeability</h3>
+<ul>
+<li>V3: Core contracts immutable</li>
+<li>V4: Hooks system allows extensions but core is secure</li>
+<li>Governance via UNI token</li>
+</ul>
+<h2>Protocol &amp; Team</h2>
+<h3>Team</h3>
+<ul>
+<li><strong>Founder:</strong> Hayden Adams (doxxed)</li>
+<li>Uniswap Labs (legitimate company)</li>
+<li>Large engineering team</li>
+<li>Industry-leading protocol</li>
+</ul>
+<h3>Governance</h3>
+<ul>
+<li>UNI token governance</li>
+<li>Timelock on parameter changes</li>
+<li>Uniswap Foundation for grants</li>
+</ul>
+<h3>Backing</h3>
+<ul>
+<li>a16z, Paradigm, and top VCs</li>
+<li>Self-sustaining via fees</li>
+<li>Massive treasury ($2B+ at peak)</li>
+</ul>
+<h2>Economic Model</h2>
+<h3>Yield Source</h3>
+<ul>
+<li>Trading fees (variable by pool: 0.01%, 0.05%, 0.3%, 1%)</li>
+<li>No token emissions on V3/V4</li>
+<li>Pure fee-based yield</li>
+</ul>
+<h3>Versions</h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Key Feature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>V2</td>
+<td>Constant product AMM</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>Concentrated liquidity</td>
+</tr>
+<tr>
+<td>V4</td>
+<td>Hooks (customizable logic)</td>
+</tr>
+</tbody></table>
+<h3>Token (UNI)</h3>
+<ul>
+<li>Governance only</li>
+<li>No fee switch activated yet</li>
+<li>Proposal for fee share ongoing</li>
+</ul>
+<h3>Sustainability</h3>
+<ul>
+<li>100% real yield from trading fees</li>
+<li>No emissions dilution</li>
+<li>Largest DEX by volume</li>
+</ul>
+<h2>V4 Hooks &amp; FairFlow</h2>
+<h3>What are Hooks?</h3>
+<ul>
+<li>V4 allows custom logic (hooks) to be attached to pools</li>
+<li>Enables features like dynamic fees, TWAMM, limit orders</li>
+</ul>
+<h3>FairFlow (KyberSwap)</h3>
+<ul>
+<li>Hook implementation for MEV protection</li>
+<li>Batches trades to reduce sandwich attacks</li>
+<li>Additional smart contract layer on top of V4</li>
+</ul>
+<h3>Hook Risks</h3>
+<ol>
+<li><strong>Additional Smart Contract Risk:</strong> Each hook is new code</li>
+<li><strong>Audit Status Varies:</strong> Not all hooks equally audited</li>
+<li><strong>Newer Code:</strong> V4 + hooks are relatively new (2024)</li>
+</ol>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>5/5</td>
+<td>Best-in-class auditing, $3M+ bounty, 6 years track record</td>
+</tr>
+<tr>
+<td>Protocol/Team</td>
+<td>5/5</td>
+<td>Doxxed team, major VCs, legitimate company</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>5/5</td>
+<td>Pure fee yield, no emissions, sustainable</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>5/5</td>
+<td>Multi-chain with focus on Ethereum</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>5/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>V4 + Hooks Adjustment</h3>
+<p>When using V4 with third-party hooks (like FairFlow):</p>
+<ul>
+<li><strong>Smart Contract Score:</strong> 4/5 (newer code, hook-specific risks)</li>
+<li><strong>Overall with Hooks:</strong> 4/5</li>
+</ul>
+<h2>Summary</h2>
+<p>Uniswap is the gold standard for DEX security. Massive bug bounties, top-tier audits (Trail of Bits, OpenZeppelin), and years of battle-testing make it the safest DEX in DeFi. V4 with hooks introduces new code that&#39;s less battle-tested - still solid but worth noting. Pure fee-based yield with no token emissions makes economics sustainable.</p>
+<h2>References</h2>
+<ul>
+<li>Security: <a href="https://docs.uniswap.org/concepts/protocol/security">https://docs.uniswap.org/concepts/protocol/security</a></li>
+<li>Bug Bounty: <a href="https://uniswap.org/bug-bounty">https://uniswap.org/bug-bounty</a></li>
+<li>V4 Docs: <a href="https://docs.uniswap.org/contracts/v4/overview">https://docs.uniswap.org/contracts/v4/overview</a></li>
+<li>GitHub: <a href="https://github.com/uniswap">https://github.com/uniswap</a></li>
+</ul>
+</body></html>

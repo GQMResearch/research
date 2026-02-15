@@ -1,0 +1,196 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>protocols-pendle</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>Pendle Finance</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> Yield Tokenization / Fixed Yield</li>
+<li><strong>Chains:</strong> Ethereum, Arbitrum, BNB Chain, Optimism, Mantle</li>
+<li><strong>TVL:</strong> ~$3B+</li>
+<li><strong>Live Since:</strong> V1 June 2021, V2 December 2022</li>
+<li><strong>Website:</strong> <a href="https://pendle.finance">https://pendle.finance</a></li>
+<li><strong>Docs:</strong> <a href="https://docs.pendle.finance">https://docs.pendle.finance</a></li>
+</ul>
+<h2>Smart Contract Security</h2>
+<h3>Audits</h3>
+<p>Pendle V2 has undergone multiple security audits:</p>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spearbit</td>
+<td>Core V2 contracts</td>
+<td>✅ Completed</td>
+</tr>
+<tr>
+<td>Dedaub</td>
+<td>Core V2 contracts</td>
+<td>✅ Completed</td>
+</tr>
+<tr>
+<td>Ackee Blockchain</td>
+<td>V2 contracts</td>
+<td>✅ Completed</td>
+</tr>
+<tr>
+<td>ChainSecurity</td>
+<td>Various components</td>
+<td>✅ Completed</td>
+</tr>
+</tbody></table>
+<p>Audit reports available at: <a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits">https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits</a></p>
+<h3>Bug Bounty</h3>
+<ul>
+<li><strong>Platform:</strong> Immunefi</li>
+<li><strong>Status:</strong> Active program</li>
+<li><strong>Scope:</strong> Smart contracts</li>
+</ul>
+<h3>Incidents</h3>
+<ul>
+<li>No major exploits on V2</li>
+<li>V1 had minor issues (resolved before V2 launch)</li>
+<li>Clean security record since V2 launch</li>
+</ul>
+<h3>Upgradeability</h3>
+<ul>
+<li>Some contracts upgradeable via governance</li>
+<li>Timelocks in place</li>
+<li>Market contracts are immutable once deployed</li>
+</ul>
+<h2>Protocol &amp; Team</h2>
+<h3>Team</h3>
+<ul>
+<li><strong>Founder:</strong> TN Lee (doxxed)</li>
+<li>Singapore-based team</li>
+<li>Active, transparent development</li>
+<li>Regular community updates</li>
+</ul>
+<h3>Governance</h3>
+<ul>
+<li>vePENDLE governance model</li>
+<li>Fee distribution to stakers</li>
+<li>Parameter changes via governance</li>
+</ul>
+<h3>Backing</h3>
+<ul>
+<li>Raised $3.7M (Mechanism Capital, Crypto.com, others)</li>
+<li>Self-sustaining via protocol fees</li>
+<li>Strong treasury</li>
+</ul>
+<h2>Economic Model</h2>
+<h3>Yield Source</h3>
+<ul>
+<li>Trading fees on PT/YT swaps</li>
+<li>Underlying yield from assets (passed to YT holders)</li>
+<li>PENDLE emissions for liquidity mining</li>
+</ul>
+<h3>How Pendle Works</h3>
+<ol>
+<li>Yield-bearing assets split into PT (Principal Token) and YT (Yield Token)</li>
+<li>PT = fixed yield (buy at discount, redeem at par at maturity)</li>
+<li>YT = variable yield (receives all yield until maturity)</li>
+<li>AMM enables trading between these components</li>
+</ol>
+<h3>Token (PENDLE)</h3>
+<ul>
+<li>Governance token</li>
+<li>vePENDLE for boosted rewards and fee share</li>
+<li>2% annual inflation cap</li>
+</ul>
+<h3>Sustainability</h3>
+<ul>
+<li>Real yield from swap fees</li>
+<li>Underlying assets generate real yield</li>
+<li>Emissions controlled via vePENDLE</li>
+</ul>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>4/5</td>
+<td>Multiple audits, clean V2 record, relatively newer (2022)</td>
+</tr>
+<tr>
+<td>Protocol/Team</td>
+<td>4/5</td>
+<td>Doxxed team, VC-backed, transparent</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>4/5</td>
+<td>Real yield model, controlled emissions</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>4.5/5</td>
+<td>Multi-chain but primarily ETH/Arbitrum</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>PT-Specific Risks</h2>
+<p>When using Pendle PT strategies:</p>
+<ol>
+<li><strong>Duration Risk:</strong> Locked until maturity - early exit may result in loss</li>
+<li><strong>Underlying Asset Risk:</strong> PT value depends on underlying (e.g., sUSDai depends on DAI)</li>
+<li><strong>Smart Contract Risk:</strong> Both Pendle contracts AND underlying protocol</li>
+<li><strong>Yield Compression:</strong> Fixed APY set at purchase - if rates rise, you&#39;re locked in</li>
+</ol>
+<h3>PT Risk by Underlying</h3>
+<table>
+<thead>
+<tr>
+<th>Underlying</th>
+<th>Additional Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sUSDai</td>
+<td>Low - DAI savings rate, MakerDAO backing</td>
+</tr>
+<tr>
+<td>sUSDe</td>
+<td>Medium - Ethena&#39;s delta-neutral strategy</td>
+</tr>
+<tr>
+<td>Restaking (eETH, etc.)</td>
+<td>Medium-High - Additional smart contract layers</td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>Pendle is the leading yield tokenization protocol with solid security practices. Multiple audits, clean track record since V2, and a well-designed economic model. PT strategies offer fixed yields but carry duration and underlying asset risk. Best used for shorter maturities on high-conviction underlyings (DAI, USDC-based).</p>
+<h2>References</h2>
+<ul>
+<li>Audits: <a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits">https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits</a></li>
+<li>Docs: <a href="https://docs.pendle.finance">https://docs.pendle.finance</a></li>
+<li>App: <a href="https://app.pendle.finance">https://app.pendle.finance</a></li>
+</ul>
+</body></html>

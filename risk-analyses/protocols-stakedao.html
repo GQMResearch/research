@@ -1,0 +1,172 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>protocols-stakedao</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>Stake DAO</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> Yield Aggregator / Liquid Lockers</li>
+<li><strong>Chains:</strong> Ethereum primarily</li>
+<li><strong>TVL:</strong> ~$100M+</li>
+<li><strong>Live Since:</strong> January 2021</li>
+<li><strong>Website:</strong> <a href="https://stakedao.org">https://stakedao.org</a></li>
+<li><strong>Docs:</strong> <a href="https://docs.stakedao.org">https://docs.stakedao.org</a></li>
+</ul>
+<h2>Smart Contract Security</h2>
+<h3>Audits</h3>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Peckshield</td>
+<td>Core contracts</td>
+<td>2021</td>
+</tr>
+<tr>
+<td>Halborn</td>
+<td>Strategy vaults</td>
+<td>2022</td>
+</tr>
+<tr>
+<td>Zokyo</td>
+<td>Various</td>
+<td>2022</td>
+</tr>
+</tbody></table>
+<h3>Bug Bounty</h3>
+<ul>
+<li><strong>Status:</strong> Limited program</li>
+<li><strong>Platform:</strong> Direct disclosure</li>
+<li>Not as robust as larger protocols</li>
+</ul>
+<h3>Incidents</h3>
+<ul>
+<li>Minor issues in early days (resolved)</li>
+<li>No major exploits</li>
+<li>Generally clean record</li>
+</ul>
+<h3>Upgradeability</h3>
+<ul>
+<li>Strategy contracts upgradeable</li>
+<li>Governance-controlled</li>
+<li>veSDT voting on parameters</li>
+</ul>
+<h2>Protocol &amp; Team</h2>
+<h3>Team</h3>
+<ul>
+<li>Semi-doxxed team</li>
+<li>French-based</li>
+<li>Active development</li>
+</ul>
+<h3>Governance</h3>
+<ul>
+<li>veSDT (vote-escrowed SDT)</li>
+<li>Similar to Curve&#39;s veCRV model</li>
+<li>Gauge voting for emissions</li>
+</ul>
+<h3>Backing</h3>
+<ul>
+<li>Community-funded</li>
+<li>Self-sustaining via fees</li>
+<li>No major VC backing (community-focused)</li>
+</ul>
+<h2>Economic Model</h2>
+<h3>Yield Source</h3>
+<ul>
+<li>Underlying protocol yields (Curve, Balancer, etc.)</li>
+<li>Auto-compounding</li>
+<li>SDT emissions for boosted rewards</li>
+</ul>
+<h3>Key Products</h3>
+<ol>
+<li><strong>Liquid Lockers:</strong> sdCRV, sdBAL, sdANGLE, etc.</li>
+<li><strong>Strategy Vaults:</strong> Auto-compounding strategies</li>
+<li><strong>Bribes:</strong> Marketplace for gauge votes</li>
+</ol>
+<h3>Token (SDT)</h3>
+<ul>
+<li>Governance token</li>
+<li>veSDT for boosted rewards</li>
+<li>Emission schedule</li>
+</ul>
+<h3>Sustainability</h3>
+<ul>
+<li>Fees from strategies (10-15% performance fee typically)</li>
+<li>Bribe revenue</li>
+<li>Some emission dependency</li>
+</ul>
+<h2>sdToken Risks</h2>
+<h3>What are sdTokens?</h3>
+<ul>
+<li>Liquid staking derivatives of locked tokens</li>
+<li>e.g., sdCRV = liquid version of veCRV</li>
+<li>Allows trading while earning voting rewards</li>
+</ul>
+<h3>Risks</h3>
+<ol>
+<li><strong>Depeg Risk:</strong> sdToken can trade below 1:1 with underlying</li>
+<li><strong>Smart Contract Layer:</strong> Additional contracts on top of base protocol</li>
+<li><strong>Liquidity:</strong> May have thin liquidity for large exits</li>
+<li><strong>Dependency:</strong> Relies on underlying protocol (Curve, etc.)</li>
+</ol>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>3.5/5</td>
+<td>Audited but less extensively than top-tier protocols</td>
+</tr>
+<tr>
+<td>Protocol/Team</td>
+<td>3.5/5</td>
+<td>Semi-doxxed, smaller team, community-focused</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>3.5/5</td>
+<td>Real yield but emission-dependent growth</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>5/5</td>
+<td>Ethereum mainnet</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>3.5/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>Stake DAO is a solid yield aggregator with a focus on liquid lockers for governance tokens. Less audited than blue-chip protocols but has maintained a clean record. Good for accessing boosted Curve yields without locking. Medium risk - suitable for moderate allocations rather than core positions.</p>
+<h2>References</h2>
+<ul>
+<li>Docs: <a href="https://docs.stakedao.org">https://docs.stakedao.org</a></li>
+<li>App: <a href="https://app.stakedao.org">https://app.stakedao.org</a></li>
+<li>GitHub: <a href="https://github.com/StakeDAO">https://github.com/StakeDAO</a></li>
+</ul>
+</body></html>

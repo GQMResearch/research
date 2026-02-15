@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis: Pendle Finance</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --green: #22c55e; --red: #ef4444; --yellow: #eab308; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: white; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary); }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: white; }
+        p { margin: 0.75rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: var(--card); border-radius: 0.5rem; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; background: rgba(0,0,0,0.2); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+        code { background: var(--card); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+        blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; color: var(--muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        strong { color: white; }
+        em { color: var(--muted); }
+        .score-5 { color: var(--green); }
+        .score-4 { color: #4ade80; }
+        .score-3 { color: var(--yellow); }
+        .score-2 { color: var(--red); }
+    </style>
+</head>
+<body>
+<h1>Fundamental Analysis: Pendle Finance</h1>
+<p><strong>Ticker:</strong> PENDLE<br><strong>Sector:</strong> DeFi - Yield Tokenization<br><strong>Analysis Date:</strong> 2026-02-10<br><strong>Analyst:</strong> Aipa (for Yieldschool)</p>
+<hr>
+<h2>1. Official &amp; Core Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Website</td>
+<td><a href="https://www.pendle.finance">https://www.pendle.finance</a></td>
+</tr>
+<tr>
+<td>Twitter/X</td>
+<td><a href="https://twitter.com/penaborefinance">https://twitter.com/penaborefinance</a></td>
+</tr>
+<tr>
+<td>Discord</td>
+<td><a href="https://discord.gg/pendle">https://discord.gg/pendle</a></td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a href="https://github.com/pendle-finance">https://github.com/pendle-finance</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://docs.pendle.finance">https://docs.pendle.finance</a></td>
+</tr>
+<tr>
+<td>CoinGecko</td>
+<td><a href="https://coingecko.com/en/coins/pendle">https://coingecko.com/en/coins/pendle</a></td>
+</tr>
+<tr>
+<td>DeFiLlama</td>
+<td><a href="https://defillama.com/protocol/pendle">https://defillama.com/protocol/pendle</a></td>
+</tr>
+</tbody></table>
+<h3>Audits</h3>
+<p>Full list: <a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits/">GitHub Audits</a></p>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://ackeeblockchain.com/">Ackee</a></td>
+<td>Pendle V2</td>
+<td><a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits/">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://dedaub.com/">Dedaub</a></td>
+<td>Pendle V2</td>
+<td><a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits/">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://dingbats.zone/">Dingbats</a></td>
+<td>Pendle V2</td>
+<td><a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits/">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://code4rena.com/">Code4rena</a></td>
+<td>Competition</td>
+<td><a href="https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits/">GitHub</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. Project Overview</h2>
+<h3>What It Does</h3>
+<p>Pendle Finance is a yield tokenization protocol that splits interest-bearing assets into two components:</p>
+<ul>
+<li><strong>PT (Principal Token)</strong> — Represents the principal, redeemable at maturity for the underlying</li>
+<li><strong>YT (Yield Token)</strong> — Represents the future yield stream until maturity</li>
+</ul>
+<p>This enables fixed-rate yields (buy PT at discount), yield speculation (buy YT), and sophisticated yield strategies.</p>
+<h3>Key Innovation</h3>
+<ul>
+<li>First major protocol to bring fixed-income concepts to DeFi</li>
+<li>Custom AMM designed for time-decaying assets</li>
+<li>vePENDLE system for governance and revenue sharing</li>
+</ul>
+<h3>Roadmap</h3>
+<p><strong>Delivered:</strong></p>
+<ul>
+<li>Pendle V1 (2021)</li>
+<li>Pendle V2 with custom AMM (2023)</li>
+<li>Multi-chain expansion (Ethereum, Arbitrum, Base, Sonic, etc.)</li>
+<li>Boros (leveraged yield trading)</li>
+</ul>
+<p><strong>Current/Upcoming:</strong></p>
+<ul>
+<li>Further chain expansion</li>
+<li>New asset integrations</li>
+<li>Enhanced Boros features</li>
+</ul>
+<h3>Team</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Background</th>
+<th>Doxxed?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Co-founder/CEO</td>
+<td><a href="https://www.crunchbase.com/person/tn-lee-7a6b">TN Lee</a></td>
+<td>Founding team Kyber Network, Head of Business</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Co-founder</td>
+<td>Vu Nguyen</td>
+<td>Engineering</td>
+<td>✅ Yes</td>
+</tr>
+</tbody></table>
+<p><strong>Track Record:</strong> TN Lee was part of Kyber Network founding team — one of the earliest and most respected DEXs. Strong DeFi pedigree.</p>
+<h3>Sector &amp; Competition</h3>
+<p><strong>Category:</strong> Yield Tokenization / Fixed Income DeFi<br><strong>Market Size:</strong> DeFi lending + yield ~$50B+ TVL  </p>
+<p><strong>Main Competitors:</strong></p>
+<ul>
+<li>Element Finance (acquired/merged)</li>
+<li>Sense Finance</li>
+<li>Spectra (launching)</li>
+<li>APWine</li>
+</ul>
+<p><strong>Competitive Position:</strong> Market leader in yield tokenization by significant margin.</p>
+<p><strong>Macro Tailwinds:</strong></p>
+<ul>
+<li>Growing demand for fixed-rate DeFi yields</li>
+<li>Institutional need for predictable returns</li>
+<li>LST/LRT growth (major yield sources)</li>
+</ul>
+<p><strong>Macro Headwinds:</strong></p>
+<ul>
+<li>Complexity barrier for retail users</li>
+<li>Dependency on underlying yield sources</li>
+<li>Competition from new entrants</li>
+</ul>
+<hr>
+<h2>3. How It Works (User Perspective)</h2>
+<h3>High-Level Explanation</h3>
+<ol>
+<li>User deposits yield-bearing asset (e.g., stETH, sUSDe)</li>
+<li>Pendle mints PT + YT tokens with a maturity date</li>
+<li>User can sell YT for immediate cash (locking in fixed rate via PT)</li>
+<li>Or sell PT and keep YT to speculate on higher yields</li>
+<li>At maturity, PT redeems 1:1 for underlying</li>
+</ol>
+<h3>User Roles &amp; Incentives</h3>
+<h4>PT Buyers (Fixed Yield)</h4>
+<ul>
+<li><strong>Actions:</strong> Buy PT at discount, hold to maturity</li>
+<li><strong>Incentives:</strong> Guaranteed fixed yield regardless of rate changes</li>
+<li><strong>Risks:</strong> Opportunity cost if rates rise significantly</li>
+</ul>
+<h4>YT Buyers (Yield Speculators)</h4>
+<ul>
+<li><strong>Actions:</strong> Buy YT to bet on high yields</li>
+<li><strong>Incentives:</strong> Leveraged exposure to yield movements</li>
+<li><strong>Risks:</strong> YT can go to zero if yields disappoint</li>
+</ul>
+<h4>Liquidity Providers</h4>
+<ul>
+<li><strong>Actions:</strong> Provide liquidity to PT/underlying pools</li>
+<li><strong>Incentives:</strong> Trading fees + PENDLE incentives</li>
+<li><strong>Risks:</strong> Impermanent loss, smart contract risk</li>
+</ul>
+<h4>vePENDLE Holders</h4>
+<ul>
+<li><strong>Actions:</strong> Lock PENDLE for vePENDLE</li>
+<li><strong>Incentives:</strong> Boosted yields, governance, protocol revenue share</li>
+<li><strong>Risks:</strong> Lock-up period, token price risk</li>
+</ul>
+<hr>
+<h2>4. Financials &amp; Economics</h2>
+<h3>Key Metrics (Live)</h3>
+<ul>
+<li><strong>TVL:</strong> ~$2.4B (across all chains)</li>
+<li><strong>Ethereum:</strong> $853M</li>
+<li><strong>Arbitrum:</strong> $461M</li>
+<li><strong>Market Cap:</strong> ~$189M</li>
+</ul>
+<h3>Revenue Sources</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Status</th>
+<th>Who Captures It?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Trading fees</td>
+<td>Active</td>
+<td>LPs + vePENDLE holders</td>
+</tr>
+<tr>
+<td>Yield fees</td>
+<td>Active</td>
+<td>Protocol → vePENDLE</td>
+</tr>
+<tr>
+<td>Maturity fees</td>
+<td>Active</td>
+<td>Protocol</td>
+</tr>
+</tbody></table>
+<h3>Tokenomics</h3>
+<p><strong>Supply:</strong></p>
+<ul>
+<li>Max Supply: 258,446,028 PENDLE (with emissions)</li>
+<li>Circulating: <del>155M (</del>60%)</li>
+</ul>
+<p><strong>Emissions:</strong></p>
+<ul>
+<li>Weekly emissions decreasing over time</li>
+<li>2% annual inflation cap long-term</li>
+</ul>
+<p><strong>Value Accrual:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Status</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Revenue share</td>
+<td>✅ ACTIVE</td>
+<td>80% of swap fees to vePENDLE</td>
+</tr>
+<tr>
+<td>Yield fees</td>
+<td>✅ ACTIVE</td>
+<td>3% of YT yield to protocol</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>✅ ACTIVE</td>
+<td>vePENDLE directs incentives</td>
+</tr>
+</tbody></table>
+<p><strong>vePENDLE Benefits:</strong></p>
+<ul>
+<li>Share of protocol revenue</li>
+<li>Boosted LP yields (up to 2.5x)</li>
+<li>Vote on PENDLE emissions allocation</li>
+</ul>
+<hr>
+<h2>5. Security &amp; Risk Profile</h2>
+<h3>Economic Attack Vectors</h3>
+<table>
+<thead>
+<tr>
+<th>Vector</th>
+<th>Risk Level</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Oracle manipulation</td>
+<td>Low</td>
+<td>Chainlink + TWAP oracles</td>
+</tr>
+<tr>
+<td>AMM exploits</td>
+<td>Medium</td>
+<td>Custom AMM audited</td>
+</tr>
+<tr>
+<td>Underlying protocol risk</td>
+<td>Medium</td>
+<td>Diversified integrations</td>
+</tr>
+</tbody></table>
+<h3>Access Control</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Details</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Upgradeability</td>
+<td>Limited</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Admin keys</td>
+<td>Multisig</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>Chainlink + internal</td>
+<td>Low</td>
+</tr>
+</tbody></table>
+<h3>Historical Incidents</h3>
+<ul>
+<li><strong>Penpie Exploit (2024):</strong> Third-party integration (Penpie) was exploited for $27M. Pendle core contracts were NOT affected. Highlights integration/composability risks.</li>
+</ul>
+<h3>Risk Score</h3>
+<p><strong>Overall Risk Score: 4/5</strong> (Low-Medium Risk)</p>
+<hr>
+<h2>6. Investors &amp; Funding</h2>
+<h3>Funding Rounds</h3>
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Date</th>
+<th>Amount</th>
+<th>Lead Investor</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Seed</td>
+<td>Apr 2021</td>
+<td>$3.7M</td>
+<td>Mechanism Capital</td>
+<td><a href="https://finance.yahoo.com/news/pendle-raises-3-7m-defi-080000426.html">Yahoo Finance</a></td>
+</tr>
+<tr>
+<td>Follow-on</td>
+<td>Nov 2023</td>
+<td>Undisclosed</td>
+<td>Spartan Capital</td>
+<td><a href="https://cointelegraph.com/news/spartan-capital-pendle-finance">Cointelegraph</a></td>
+</tr>
+</tbody></table>
+<h3>Notable Backers</h3>
+<ul>
+<li><a href="https://finance.yahoo.com/news/pendle-raises-3-7m-defi-080000426.html">Mechanism Capital</a> — Seed lead</li>
+<li><a href="https://cointelegraph.com/news/spartan-capital-pendle-finance">Spartan Group</a> — Long-term backer, follow-on</li>
+<li><a href="https://finance.yahoo.com/news/pendle-raises-3-7m-defi-080000426.html">Crypto.com Capital</a> — Seed participant</li>
+<li><a href="https://tracxn.com/d/companies/pendle/__xRr_PBH5nTFW7hsedkR-sGn_5BXeOJARC8__GUDoHSw/funding-and-investors">Binance Labs</a> — 2023 participant</li>
+<li><a href="https://finance.yahoo.com/news/pendle-raises-3-7m-defi-080000426.html">Hashkey Capital</a> — Seed participant</li>
+</ul>
+<hr>
+<h2>7. Community &amp; Social Signals</h2>
+<h3>Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Twitter followers</td>
+<td>200K+</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td>Active</td>
+<td>Good engagement</td>
+</tr>
+<tr>
+<td>GitHub commits</td>
+<td>Active</td>
+<td>Continuous development</td>
+</tr>
+</tbody></table>
+<h3>Sentiment Assessment</h3>
+<p><strong>Community Quality:</strong> 4/5 — Technical, yield-focused<br><strong>Developer Activity:</strong> 5/5 — Very active<br><strong>Team Communication:</strong> 4/5 — Regular updates  </p>
+<hr>
+<h2>8. Summary &amp; Verdict</h2>
+<h3>Strengths</h3>
+<ol>
+<li><strong>Market leader</strong> in yield tokenization with $2.4B TVL</li>
+<li><strong>Real revenue</strong> with vePENDLE fee sharing active</li>
+<li><strong>Strong team</strong> with Kyber Network pedigree</li>
+<li><strong>Quality backers</strong> (Mechanism, Spartan, Binance)</li>
+<li><strong>Innovation</strong> — custom AMM, vePENDLE model</li>
+</ol>
+<h3>Weaknesses</h3>
+<ol>
+<li><strong>Complexity</strong> — Hard for retail to understand</li>
+<li><strong>Composability risk</strong> — Penpie incident shows integration dangers</li>
+<li><strong>Dependency</strong> — Relies on underlying yield sources</li>
+<li><strong>Competition</strong> — Spectra and others entering market</li>
+</ol>
+<h3>Investment Thesis</h3>
+<p><strong>Bull Case:</strong></p>
+<ul>
+<li>Yield tokenization becomes standard DeFi primitive</li>
+<li>Institutional demand for fixed-rate DeFi grows</li>
+<li>vePENDLE flywheel strengthens with more TVL</li>
+<li>Multi-chain expansion captures new markets</li>
+</ul>
+<p><strong>Bear Case:</strong></p>
+<ul>
+<li>Complexity limits retail adoption</li>
+<li>Competitors gain traction</li>
+<li>Underlying yield sources dry up</li>
+<li>Integration risks materialize</li>
+</ul>
+<h3>Final Rating</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score (1-5)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Team</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tokenomics</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.3/5</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Report generated by Geoff for Yieldschool Research</em></p>
+
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;">
+    <p>Generated by Geoff for Yieldschool Research</p>
+</footer>
+</body>
+</html>

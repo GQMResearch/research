@@ -1,0 +1,169 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>stablecoins-usde</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>USDe (Ethena)</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> Delta-neutral synthetic stablecoin</li>
+<li><strong>Issuer:</strong> Ethena Labs</li>
+<li><strong>Backing:</strong> ETH + short perpetual positions</li>
+<li><strong>Market Cap:</strong> ~$3B+</li>
+<li><strong>Chains:</strong> Ethereum (native)</li>
+<li><strong>Website:</strong> <a href="https://ethena.fi">https://ethena.fi</a></li>
+</ul>
+<h2>Mechanism</h2>
+<h3>How USDe Works</h3>
+<ol>
+<li>User deposits ETH/stETH</li>
+<li>Ethena opens equivalent short perpetual position on CEXs</li>
+<li>ETH spot + ETH short = delta neutral</li>
+<li>Yield from: staking ETH + funding rates</li>
+</ol>
+<h3>Delta-Neutral Strategy</h3>
+<ul>
+<li>Long spot ETH (earns staking yield)</li>
+<li>Short perp ETH (earns funding when positive)</li>
+<li>Net position = neutral to ETH price</li>
+<li>Yield = staking rewards + funding payments</li>
+</ul>
+<h3>Custody</h3>
+<ul>
+<li>ETH held in qualified custody (Copper, Ceffu, Cobo)</li>
+<li>Short positions on CEXs (Binance, Bybit, OKX, etc.)</li>
+<li>Off-exchange settlement to reduce CEX exposure</li>
+</ul>
+<h2>Yield Source (sUSDe)</h2>
+<h3>Where Yield Comes From</h3>
+<ol>
+<li><strong>ETH Staking:</strong> ~4% from staked ETH</li>
+<li><strong>Funding Rates:</strong> Historically positive (shorts get paid)</li>
+<li>Combined: 15-30%+ during bull markets</li>
+</ol>
+<h3>Funding Rate Risk</h3>
+<ul>
+<li>Funding rates are variable</li>
+<li>Can go negative (longs pay shorts → Ethena pays)</li>
+<li>Insurance fund covers short-term negative funding</li>
+<li>Prolonged negative = yield compression or loss</li>
+</ul>
+<h2>Risk Factors</h2>
+<h3>Strengths</h3>
+<ul>
+<li>Innovative mechanism</li>
+<li>High yields during normal conditions</li>
+<li>Battle-tested through 2024 market volatility</li>
+<li>Transparent backing</li>
+</ul>
+<h3>Risks</h3>
+<ol>
+<li><strong>Funding Rate Risk:</strong> Negative funding erodes yield</li>
+<li><strong>CEX Risk:</strong> Positions on centralized exchanges</li>
+<li><strong>Smart Contract Risk:</strong> Multiple custody/protocol layers</li>
+<li><strong>Liquidity Risk:</strong> Large redemptions could stress mechanism</li>
+<li><strong>Peg Risk:</strong> Not 1:1 fiat-backed, depends on mechanism</li>
+</ol>
+<h3>Bear Market Scenario</h3>
+<ul>
+<li>Funding rates typically negative in bear markets</li>
+<li>Could result in negative yield</li>
+<li>Insurance fund provides buffer</li>
+<li>Mechanism not tested through prolonged bear market</li>
+</ul>
+<h3>Exchange Counterparty Risk</h3>
+<ul>
+<li>Relies on CEXs for short positions</li>
+<li>If major CEX fails, positions could be affected</li>
+<li>Mitigated by multi-exchange distribution</li>
+</ul>
+<h2>Historical Performance</h2>
+<h3>Peg Stability</h3>
+<ul>
+<li>Launched December 2023</li>
+<li>Maintained peg through 2024</li>
+<li>Minor deviations during high volatility</li>
+<li>~1 year track record</li>
+</ul>
+<h3>Stress Tests</h3>
+<ul>
+<li>Withstood Bitcoin ETF volatility (Jan 2024)</li>
+<li>Multiple leverage flush events</li>
+<li>No major depeg events</li>
+</ul>
+<h2>sUSDe vs USDe</h2>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Yield</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>USDe</td>
+<td>No native yield</td>
+<td>Trading, collateral</td>
+</tr>
+<tr>
+<td>sUSDe</td>
+<td>Earns yield</td>
+<td>Staking, Pendle strategies</td>
+</tr>
+</tbody></table>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Backing</td>
+<td>3.5/5</td>
+<td>Delta-neutral, not fiat-backed</td>
+</tr>
+<tr>
+<td>Peg Stability</td>
+<td>4/5</td>
+<td>Good so far, limited history</td>
+</tr>
+<tr>
+<td>Issuer</td>
+<td>3.5/5</td>
+<td>New protocol, VC-backed, CEX dependent</td>
+</tr>
+<tr>
+<td>Censorship Resistance</td>
+<td>3/5</td>
+<td>CEX dependency</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>3.5/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>USDe is an innovative synthetic stablecoin with attractive yields during bull markets. The delta-neutral mechanism is clever but introduces risks not present in traditional stables (funding rates, CEX exposure). Good for yield strategies but not a replacement for USDC/DAI as a stable store of value. Limited track record (~1 year) - suitable for moderate allocations.</p>
+<h2>References</h2>
+<ul>
+<li>Mechanism: <a href="https://docs.ethena.fi">https://docs.ethena.fi</a></li>
+<li>Dashboard: <a href="https://app.ethena.fi/dashboards">https://app.ethena.fi/dashboards</a></li>
+<li>Insurance Fund: <a href="https://app.ethena.fi/insurance">https://app.ethena.fi/insurance</a></li>
+<li>Audits: <a href="https://docs.ethena.fi/resources/audits">https://docs.ethena.fi/resources/audits</a></li>
+</ul>
+</body></html>

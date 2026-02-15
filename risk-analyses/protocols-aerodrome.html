@@ -1,0 +1,193 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>protocols-aerodrome</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>Aerodrome Finance</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> DEX (ve(3,3) model)</li>
+<li><strong>Chains:</strong> Base only</li>
+<li><strong>TVL:</strong> ~$1.5B+</li>
+<li><strong>Live Since:</strong> August 2023</li>
+<li><strong>Website:</strong> <a href="https://aerodrome.finance">https://aerodrome.finance</a></li>
+<li><strong>Docs:</strong> <a href="https://aerodrome.finance/docs">https://aerodrome.finance/docs</a></li>
+</ul>
+<h2>Smart Contract Security</h2>
+<h3>Audits</h3>
+<p>Aerodrome is a fork of Velodrome V2, which itself is audited:</p>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Code4rena</td>
+<td>Velodrome V2 (base code)</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>Spearbit</td>
+<td>Slipstream (CL implementation)</td>
+<td>2023</td>
+</tr>
+</tbody></table>
+<p>Aerodrome inherits Velodrome&#39;s security model with Base-specific adaptations.</p>
+<h3>Bug Bounty</h3>
+<ul>
+<li><strong>Platform:</strong> Immunefi (via Velodrome program)</li>
+<li><strong>Status:</strong> Active</li>
+<li><strong>Max Payout:</strong> Significant bounties for critical issues</li>
+</ul>
+<h3>Incidents</h3>
+<ul>
+<li>No major exploits</li>
+<li>Clean security record since launch</li>
+<li>Velodrome (parent) also incident-free</li>
+</ul>
+<h3>Upgradeability</h3>
+<ul>
+<li>Governance-controlled upgrades</li>
+<li>veAERO voting on parameters</li>
+<li>Core AMM contracts immutable</li>
+</ul>
+<h2>Protocol &amp; Team</h2>
+<h3>Team</h3>
+<ul>
+<li>Launched by Velodrome team (experienced, semi-doxxed)</li>
+<li>Strong relationship with Base/Coinbase</li>
+<li>Backed by Base ecosystem grants</li>
+</ul>
+<h3>Governance</h3>
+<ul>
+<li>veAERO model (vote-escrowed)</li>
+<li>Weekly gauge voting for emissions</li>
+<li>Protocol-owned liquidity via bribes</li>
+</ul>
+<h3>Backing</h3>
+<ul>
+<li>Base ecosystem grant</li>
+<li>Velodrome team backing</li>
+<li>Strong TVL growth indicates market confidence</li>
+</ul>
+<h2>Economic Model</h2>
+<h3>Yield Source</h3>
+<ul>
+<li>Trading fees (variable by pool type)</li>
+<li>AERO emissions (via gauge voting)</li>
+<li>Bribes from protocols seeking liquidity</li>
+</ul>
+<h3>Pool Types</h3>
+<ol>
+<li><strong>Stable Pools:</strong> For pegged assets (low fees)</li>
+<li><strong>Volatile Pools:</strong> For non-pegged pairs</li>
+<li><strong>Concentrated Liquidity (Slipstream):</strong> Higher efficiency, higher IL risk</li>
+</ol>
+<h3>Token (AERO)</h3>
+<ul>
+<li>Governance and emissions</li>
+<li>veAERO for voting power and fee share</li>
+<li>Emissions schedule reduces over time</li>
+</ul>
+<h3>Sustainability</h3>
+<ul>
+<li>Strong fee generation from Base activity</li>
+<li>Bribes create additional demand for veAERO</li>
+<li>Ecosystem incentives from Base/Coinbase</li>
+</ul>
+<h2>Concentrated Liquidity (CL) Specific Risks</h2>
+<p>For CL pools on Aerodrome:</p>
+<ol>
+<li><strong>Active Management Required:</strong> Positions can go out of range</li>
+<li><strong>Higher IL Risk:</strong> Concentrated positions amplify impermanent loss</li>
+<li><strong>Complexity:</strong> More sophisticated than standard AMM</li>
+<li><strong>Range Selection:</strong> Wrong range = no fees earned</li>
+</ol>
+<h3>CL Pool Assessment</h3>
+<table>
+<thead>
+<tr>
+<th>Pool Type</th>
+<th>IL Risk</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stablecoin-Stablecoin CL</td>
+<td>Low</td>
+<td>Minimal</td>
+</tr>
+<tr>
+<td>Correlated (ETH/wstETH) CL</td>
+<td>Low-Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Volatile (ETH/USDC) CL</td>
+<td>High</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>Cross-asset (BTC/USDC) CL</td>
+<td>Very High</td>
+<td>Very Active</td>
+</tr>
+</tbody></table>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>4/5</td>
+<td>Audited, Velodrome-forked, ~1.5 years live</td>
+</tr>
+<tr>
+<td>Protocol/Team</td>
+<td>4/5</td>
+<td>Experienced team, Base ecosystem backing</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>4/5</td>
+<td>Strong fee generation, emission-dependent growth</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>4/5</td>
+<td>Base only - Coinbase L2, some centralization</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>Aerodrome is the dominant DEX on Base with strong security inherited from Velodrome. ve(3,3) tokenomics create sustainable incentives. CL pools offer high APRs but require understanding of IL and range management. Best for stablecoin pairs and correlated assets where IL is minimal.</p>
+<h2>References</h2>
+<ul>
+<li>App: <a href="https://aerodrome.finance">https://aerodrome.finance</a></li>
+<li>Velodrome Audits: <a href="https://github.com/velodrome-finance/contracts/tree/main/audits">https://github.com/velodrome-finance/contracts/tree/main/audits</a></li>
+<li>Slipstream Docs: <a href="https://aerodrome.finance/docs">https://aerodrome.finance/docs</a></li>
+</ul>
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis: Curve Finance</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --green: #22c55e; --red: #ef4444; --yellow: #eab308; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: white; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary); }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: white; }
+        p { margin: 0.75rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: var(--card); border-radius: 0.5rem; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; background: rgba(0,0,0,0.2); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+        code { background: var(--card); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+        blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; color: var(--muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        strong { color: white; }
+        em { color: var(--muted); }
+        .score-5 { color: var(--green); }
+        .score-4 { color: #4ade80; }
+        .score-3 { color: var(--yellow); }
+        .score-2 { color: var(--red); }
+    </style>
+</head>
+<body>
+<h1>Fundamental Analysis: Curve Finance</h1>
+<p><strong>Ticker:</strong> CRV<br><strong>Sector:</strong> DeFi - DEX / Stablecoin AMM<br><strong>Analysis Date:</strong> 2026-02-10<br><strong>Analyst:</strong> Aipa (for Yieldschool)</p>
+<hr>
+<h2>1. Official &amp; Core Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Website</td>
+<td><a href="https://curve.fi">https://curve.fi</a></td>
+</tr>
+<tr>
+<td>Twitter/X</td>
+<td><a href="https://twitter.com/CurveFinance">https://twitter.com/CurveFinance</a></td>
+</tr>
+<tr>
+<td>Discord</td>
+<td><a href="https://discord.gg/rgrfS7W">https://discord.gg/rgrfS7W</a></td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a href="https://github.com/curvefi">https://github.com/curvefi</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://resources.curve.fi">https://resources.curve.fi</a></td>
+</tr>
+<tr>
+<td>CoinGecko</td>
+<td><a href="https://coingecko.com/en/coins/curve-dao-token">https://coingecko.com/en/coins/curve-dao-token</a></td>
+</tr>
+<tr>
+<td>DeFiLlama</td>
+<td><a href="https://defillama.com/protocol/curve-dex">https://defillama.com/protocol/curve-dex</a></td>
+</tr>
+</tbody></table>
+<h3>Audits</h3>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.trailofbits.com/">Trail of Bits</a></td>
+<td>Core contracts</td>
+<td><a href="https://github.com/curvefi/curve-contract/tree/master/audits">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://quantstamp.com/">Quantstamp</a></td>
+<td>AMM contracts</td>
+<td><a href="https://github.com/curvefi/curve-contract/tree/master/audits">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://mixbytes.io/">MixBytes</a></td>
+<td>Various pools</td>
+<td><a href="https://github.com/curvefi/curve-contract/tree/master/audits">GitHub</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. Project Overview</h2>
+<h3>What It Does</h3>
+<p>Curve Finance is a decentralized exchange optimized for stablecoin and pegged asset swaps, using a specialized AMM algorithm that minimizes slippage for like-kind assets.</p>
+<h3>Key Products</h3>
+<ul>
+<li><strong>Stable Pools</strong> — Efficient swaps between stablecoins (USDC/USDT/DAI)</li>
+<li><strong>Crypto Pools</strong> — V2 pools for volatile pairs</li>
+<li><strong>crvUSD</strong> — Native overcollateralized stablecoin</li>
+<li><strong>Lending (LlamaLend)</strong> — Soft liquidation lending</li>
+</ul>
+<h3>Team</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Background</th>
+<th>Doxxed?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Founder</td>
+<td><a href="https://www.crunchbase.com/person/michael-egorov">Michael Egorov</a></td>
+<td>PhD Physics, CTO NuCypher, created StableSwap algorithm</td>
+<td>✅ Yes</td>
+</tr>
+</tbody></table>
+<p><strong>Track Record:</strong> Egorov is a well-known cryptography expert. Previously CTO of NuCypher. Curve has been running since 2020 with no major exploits to core contracts.</p>
+<h3>Sector &amp; Competition</h3>
+<p><strong>Category:</strong> DEX / Stablecoin Infrastructure<br><strong>TVL:</strong> ~$1.8B (Ethereum: $1.7B)</p>
+<p><strong>Main Competitors:</strong></p>
+<ul>
+<li>Uniswap (general purpose)</li>
+<li>Balancer (weighted pools)</li>
+<li>DODO (PMM)</li>
+</ul>
+<hr>
+<h2>3. Tokenomics</h2>
+<p><strong>Supply:</strong></p>
+<ul>
+<li>Max Supply: ~3B CRV (inflationary)</li>
+<li>Emissions decreasing over time</li>
+</ul>
+<p><strong>Value Accrual:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Status</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Trading fees</td>
+<td>✅ ACTIVE</td>
+<td>50% to LPs, 50% to veCRV</td>
+</tr>
+<tr>
+<td>veCRV bribes</td>
+<td>✅ ACTIVE</td>
+<td>Major revenue source</td>
+</tr>
+<tr>
+<td>crvUSD revenue</td>
+<td>✅ ACTIVE</td>
+<td>Lending interest</td>
+</tr>
+</tbody></table>
+<p><strong>veCRV System:</strong></p>
+<ul>
+<li>Lock CRV for up to 4 years</li>
+<li>Vote on gauge weights (emissions allocation)</li>
+<li>Earn protocol fees</li>
+<li>&quot;Curve Wars&quot; ecosystem</li>
+</ul>
+<hr>
+<h2>4. Financials</h2>
+<h3>Key Metrics</h3>
+<ul>
+<li><strong>TVL:</strong> $1.8B+</li>
+<li><strong>Daily Volume:</strong> Variable, $50M-200M+</li>
+<li><strong>Protocol Revenue:</strong> Significant (veCRV + crvUSD)</li>
+</ul>
+<h3>Funding</h3>
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Date</th>
+<th>Amount</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fair Launch</td>
+<td>Aug 2020</td>
+<td>N/A</td>
+<td>No VC round — fair launch</td>
+</tr>
+</tbody></table>
+<p>Curve was fair-launched without traditional VC funding, which is notable and respected in DeFi.</p>
+<hr>
+<h2>5. Security</h2>
+<h3>Risk Assessment</h3>
+<p><strong>Overall Risk Score: 4.5/5</strong> (Low Risk)</p>
+<ul>
+<li>Battle-tested since 2020</li>
+<li>Multiple audits</li>
+<li>No major exploits to core contracts</li>
+<li>Complex smart contract architecture</li>
+<li>crvUSD adds additional risk surface</li>
+</ul>
+<h3>Historical Incidents</h3>
+<ul>
+<li>July 2023: Vyper compiler exploit affected some pools (~$70M)</li>
+<li>Core Curve contracts were NOT the vulnerability (compiler bug)</li>
+</ul>
+<hr>
+<h2>6. Summary</h2>
+<h3>Strengths</h3>
+<ol>
+<li><strong>Market leader</strong> for stablecoin swaps</li>
+<li><strong>veCRV flywheel</strong> creates strong tokenomics</li>
+<li><strong>Fair launch</strong> — no VC dumping</li>
+<li><strong>crvUSD</strong> expanding product suite</li>
+<li><strong>Deep liquidity</strong> across stablecoins</li>
+</ol>
+<h3>Weaknesses</h3>
+<ol>
+<li><strong>Complex architecture</strong> — harder to audit</li>
+<li><strong>Vyper dependency</strong> — unique risk</li>
+<li><strong>Emissions inflation</strong></li>
+<li><strong>Competition</strong> from Uniswap V3/V4</li>
+</ol>
+<h3>Final Rating</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score (1-5)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Team</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tokenomics</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.5/5</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Report generated by Geoff for Yieldschool Research</em></p>
+
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;">
+    <p>Generated by Geoff for Yieldschool Research</p>
+</footer>
+</body>
+</html>

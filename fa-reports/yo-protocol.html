@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis: YO Protocol (yoUSD)</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --green: #22c55e; --red: #ef4444; --yellow: #eab308; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: white; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary); }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: white; }
+        p { margin: 0.75rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: var(--card); border-radius: 0.5rem; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; background: rgba(0,0,0,0.2); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+        code { background: var(--card); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+        blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; color: var(--muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        strong { color: white; }
+        em { color: var(--muted); }
+        .score-5 { color: var(--green); }
+        .score-4 { color: #4ade80; }
+        .score-3 { color: var(--yellow); }
+        .score-2 { color: var(--red); }
+    </style>
+</head>
+<body>
+<h1>Fundamental Analysis: YO Protocol (yoUSD)</h1>
+<p><strong>Ticker:</strong> YO
+<strong>Sector:</strong> DeFi — Yield Optimizer / Aggregator
+<strong>Analysis Date:</strong> 2026-02-15
+<strong>Analyst:</strong> GQM Research</p>
+<hr>
+<h2>1. Official &amp; Core Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Website</td>
+<td><a href="https://yo.xyz">yo.xyz</a></td>
+</tr>
+<tr>
+<td>App</td>
+<td><a href="https://app.yo.xyz">app.yo.xyz</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://docs.yo.xyz">docs.yo.xyz</a></td>
+</tr>
+<tr>
+<td>Twitter/X</td>
+<td><a href="https://twitter.com/YOprotocol">twitter.com/YOprotocol</a></td>
+</tr>
+<tr>
+<td>DeFiLlama</td>
+<td><a href="https://defillama.com/protocol/yo-protocol">defillama.com/protocol/yo-protocol</a></td>
+</tr>
+<tr>
+<td>Exponential.fi Risk Rating</td>
+<td><a href="https://exponential.fi/protocols/yo/8056939b-d456-48f7-8611-e14e31a6f8e7">exponential.fi/protocols/yo</a></td>
+</tr>
+<tr>
+<td>Messari Profile</td>
+<td><a href="https://messari.io/project/yo-yield-optimizer/profile">messari.io/project/yo-yield-optimizer</a></td>
+</tr>
+<tr>
+<td>CoinDesk $10M Raise Article</td>
+<td><a href="https://www.coindesk.com/web3/2025/12/13/yo-labs-raises-usd10m-to-scale-cross-chain-crypto-yield-optimization-protocol">coindesk.com</a></td>
+</tr>
+<tr>
+<td>DL News Deep Dive</td>
+<td><a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">dlnews.com</a></td>
+</tr>
+<tr>
+<td>Whales Market Guide</td>
+<td><a href="https://whales.market/blog/what-is-yo-protocol/">whales.market</a></td>
+</tr>
+</tbody></table>
+<h3>Audits</h3>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Date</th>
+<th>Scope</th>
+<th>Findings</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Offbeat Security</td>
+<td>Jan 15, 2025</td>
+<td>Core protocol</td>
+<td>No critical/high severity</td>
+<td><a href="https://2576447856-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fwkm0XGONc7sDuNeJww6d%2Fuploads%2FWoGQfyF1ui7hsQyDpWFe%2FYo-Protocol-Offbeat-Security-Review.pdf?alt=media&token=d9744cb3-24f2-4e12-b90f-a9add921df3a">PDF</a></td>
+</tr>
+<tr>
+<td>Hunter Security</td>
+<td>Jan 21, 2025</td>
+<td>Core protocol</td>
+<td>No critical/high severity</td>
+<td><a href="https://2576447856-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fwkm0XGONc7sDuNeJww6d%2Fuploads%2FylRSSVzmmHyiLiD6qEPN%2FYo-Protocol-Hunter-Security-Audit-Report.pdf?alt=media&token=cac7ba1c-a2b9-4569-906b-03176ccdaf00">PDF</a></td>
+</tr>
+<tr>
+<td>Spearbit (Cantina)</td>
+<td>May 29, 2025</td>
+<td>Core protocol</td>
+<td>No critical/high severity</td>
+<td><a href="https://docs.yo.xyz/protocol/security-audits">PDF</a></td>
+</tr>
+</tbody></table>
+<p>3 independent audits, no critical findings. Source: <a href="https://docs.yo.xyz/protocol/security-audits">docs.yo.xyz/protocol/security-audits</a> ✅</p>
+<hr>
+<h2>2. Project Overview</h2>
+<h3>What It Does</h3>
+<p>YO Protocol is a multi-chain yield optimizer that automatically allocates user deposits across the highest <strong>risk-adjusted</strong> yield opportunities in DeFi. Think of it as an index fund for DeFi yield — users deposit, YO finds the best pools and rebalances daily.</p>
+<p>Source: <a href="https://docs.yo.xyz/welcome-to-yo/what-is-yo">docs.yo.xyz/welcome-to-yo/what-is-yo</a></p>
+<h3>How It Works</h3>
+<ol>
+<li>User deposits into a yoVault (e.g., yoUSD) → receives yield-bearing yoToken (ERC-4626)</li>
+<li>YO allocates across 100+ curated strategies using <a href="https://exponential.fi/learn/risk-rating">Exponential.fi risk ratings</a></li>
+<li>Protocol rebalances daily — only when expected net gain exceeds costs</li>
+<li>Cross-chain via &quot;Embassy&quot; architecture — separate vaults per chain holding native assets (no bridge risk for underlying)</li>
+<li>yoTokens are non-rebasing: value accrues in exchange rate</li>
+</ol>
+<p>Source: <a href="https://docs.yo.xyz/protocol/yo-protocol">docs.yo.xyz/protocol/yo-protocol</a>, <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></p>
+<h3>Key Products</h3>
+<table>
+<thead>
+<tr>
+<th>Vault</th>
+<th>Underlying</th>
+<th>Chains</th>
+<th>Contract</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yoUSD</td>
+<td>USDC</td>
+<td>Base, Ethereum, Arbitrum</td>
+<td><code>0x0000000f2eb9f69274678c76222b35eec7588a65</code></td>
+</tr>
+<tr>
+<td>yoETH</td>
+<td>WETH</td>
+<td>Base, Ethereum</td>
+<td><code>0x3a43aec53490cb9fa922847385d82fe25d0e9de7</code></td>
+</tr>
+<tr>
+<td>yoBTC</td>
+<td>cbBTC</td>
+<td>Base, Ethereum</td>
+<td><code>0xbcbc8cb4d1e8ed048a6276a5e94a3e952660bcbc</code></td>
+</tr>
+<tr>
+<td>yoEUR</td>
+<td>EURC</td>
+<td>Base, Ethereum</td>
+<td><code>0x50c749ae210d3977adc824ae11f3c7fd10c871e9</code></td>
+</tr>
+<tr>
+<td>yoGOLD</td>
+<td>XAUt</td>
+<td>Ethereum</td>
+<td><code>0x586675A3a46B008d8408933cf42d8ff6c9CC61a1</code></td>
+</tr>
+<tr>
+<td>yoUSDT*</td>
+<td>USDT</td>
+<td>Ethereum (B2B only)</td>
+<td><code>0xb9a7da9e90d3b428083bae04b860faa6325b721e</code></td>
+</tr>
+</tbody></table>
+<p>*yoUSDT is B2B only — shares same vault/TVL/APY as yoUSD</p>
+<p>Source: <a href="https://docs.yo.xyz/protocol/contract-addresses">docs.yo.xyz/protocol/contract-addresses</a></p>
+<hr>
+<h2>3. ⚠️ Where Does the Yield Come From?</h2>
+<p><strong>This is the most important section for risk assessment.</strong></p>
+<p>yoUSD generates yield by deploying USDC (and equivalent stablecoins like USDT, USDe) across <strong>100+ strategies</strong> on multiple protocols and chains. The vault is asset-, protocol-, and chain-agnostic — meaning yoUSD can hold USDC on Morpho, USDe on Aave, or sDAI on Spark, wherever the best risk-adjusted return is.</p>
+<h3>Current Allocation Breakdown (as of DL News report)</h3>
+<p><strong>By Chain:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chain</th>
+<th>Allocation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ethereum</td>
+<td>~70%</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>~27%</td>
+</tr>
+<tr>
+<td>Unichain</td>
+<td>~3%</td>
+</tr>
+</tbody></table>
+<p>Source: <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></p>
+<p><strong>By Protocol (top exposures):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Allocation</th>
+<th>Yield Source</th>
+<th>Protocol Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pendle</td>
+<td>~18.5%</td>
+<td>Fixed yield (PT) + yield trading</td>
+<td><a href="https://app.pendle.finance">pendle.finance</a> — audited, $3B+ TVL</td>
+</tr>
+<tr>
+<td>Tokemak</td>
+<td>~15.6%</td>
+<td>Automated liquidity provisioning</td>
+<td>Smaller protocol, higher risk</td>
+</tr>
+<tr>
+<td>Morpho</td>
+<td>~15.1%</td>
+<td>Lending (supply side)</td>
+<td><a href="https://morpho.org">morpho.org</a> — audited, $2B+ TVL</td>
+</tr>
+<tr>
+<td>Aave</td>
+<td>Significant</td>
+<td>Lending (supply side)</td>
+<td><a href="https://aave.com">aave.com</a> — blue-chip, $10B+ TVL</td>
+</tr>
+<tr>
+<td>Fluid</td>
+<td>Significant</td>
+<td>Lending (supply side)</td>
+<td><a href="https://fluid.io">fluid.io</a> — newer, growing</td>
+</tr>
+<tr>
+<td>IPOR</td>
+<td>Minor</td>
+<td>Interest rate derivatives</td>
+<td>Specialized, smaller TVL</td>
+</tr>
+<tr>
+<td>Convex</td>
+<td>Minor</td>
+<td>Curve LP boosting</td>
+<td><a href="https://www.convexfinance.com">convexfinance.com</a> — audited</td>
+</tr>
+<tr>
+<td>Reserve</td>
+<td>Minor</td>
+<td>RToken yield</td>
+<td>Smaller protocol</td>
+</tr>
+<tr>
+<td>Idle</td>
+<td>Minor</td>
+<td>Lending aggregation</td>
+<td><a href="https://idle.finance">idle.finance</a></td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>Minor</td>
+<td>OUSD yield strategies</td>
+<td><a href="https://www.originprotocol.com">originprotocol.com</a></td>
+</tr>
+</tbody></table>
+<p>Source: <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a>, <a href="https://whales.market/blog/what-is-yo-protocol/">Whales Market</a></p>
+<h3>Yield Strategy Types</h3>
+<p>YO uses a mix of:</p>
+<ol>
+<li><strong>Lending</strong> (Aave, Morpho, Fluid) — supply stablecoins, earn interest from borrowers</li>
+<li><strong>Fixed yield</strong> (Pendle PT) — buy discounted principal tokens maturing at par</li>
+<li><strong>Liquidity provision</strong> (concentrated liquidity on Aerodrome, etc.) — earn trading fees</li>
+<li><strong>Yield-bearing tokens</strong> (sDAI, sUSDe) — hold tokens that accrue yield natively</li>
+<li><strong>Carry trades</strong> — advanced strategies like BTC carry (mentioned in FAQ)</li>
+<li><strong>Automated LP management</strong> — e.g., continuously moving to highest tick on Aerodrome</li>
+</ol>
+<p>Source: <a href="https://docs.yo.xyz/welcome-to-yo/faq">docs.yo.xyz/welcome-to-yo/faq</a></p>
+<h3>⚠️ Yield Source Risk Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Factor</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Lending risk</strong> (Aave/Morpho)</td>
+<td>Low — blue-chip protocols, overcollateralized</td>
+</tr>
+<tr>
+<td><strong>Pendle PT risk</strong></td>
+<td>Low-medium — fixed yield but exposed to underlying asset risk</td>
+</tr>
+<tr>
+<td><strong>Tokemak exposure</strong></td>
+<td>Medium — smaller protocol, less battle-tested</td>
+</tr>
+<tr>
+<td><strong>Bridge risk</strong></td>
+<td>Minimized — Embassy architecture uses native assets per chain</td>
+</tr>
+<tr>
+<td><strong>Stablecoin variant risk</strong></td>
+<td>Medium — vault can hold USDe, sUSDe (Ethena exposure)</td>
+</tr>
+<tr>
+<td><strong>Operator risk</strong></td>
+<td>Medium — rebalancing done by trusted operators, not governance</td>
+</tr>
+<tr>
+<td><strong>Strategy complexity</strong></td>
+<td>Medium — carry trades and concentrated LP add execution risk</td>
+</tr>
+</tbody></table>
+<p><strong>Key insight:</strong> The yield is REAL — it comes from lending interest, trading fees, and yield-bearing tokens. This is NOT emissions-only farming. However, the current 14% YO Rewards rate is temporary (launch campaign) and will reduce. The organic yield (without rewards) for yoUSD is ~8.64% annualized since inception.</p>
+<p>Source: <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></p>
+<hr>
+<h2>4. Team &amp; Backing</h2>
+<h3>Team</h3>
+<ul>
+<li><strong>Co-founder &amp; CIO:</strong> Mehdi Lebbar — ex-CloudKitchens (Travis Kalanick&#39;s company), Harvard Business School<ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/mlebbar/">linkedin.com/in/mlebbar</a></li>
+</ul>
+</li>
+<li>Same team built <strong>Exponential.fi</strong> (DeFi risk rating platform, live since 2022) — this is how they source their risk data. They eat their own cooking.</li>
+<li>Team based in Dubai</li>
+</ul>
+<p>Source: <a href="https://www.coindesk.com/web3/2025/12/13/yo-labs-raises-usd10m-to-scale-cross-chain-crypto-yield-optimization-protocol">CoinDesk</a>, <a href="https://www.linkedin.com/in/mlebbar/">LinkedIn</a></p>
+<h3>Funding</h3>
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Amount</th>
+<th>Lead</th>
+<th>Participants</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Series A</td>
+<td>$10M</td>
+<td>Foundation Capital</td>
+<td>Coinbase Ventures, Scribble Ventures, Launchpad Capital</td>
+<td>Dec 2025</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>Foundation Capital</strong> — top-tier Silicon Valley VC (early Uber, Netflix investor)</li>
+<li><strong>Coinbase Ventures</strong> — implies due diligence from one of crypto&#39;s most established investors</li>
+</ul>
+<p>Source: <a href="https://www.coindesk.com/web3/2025/12/13/yo-labs-raises-usd10m-to-scale-cross-chain-crypto-yield-optimization-protocol">CoinDesk</a>, <a href="https://finance.yahoo.com/news/yo-labs-raises-10m-scale-150000762.html">Yahoo Finance</a></p>
+<hr>
+<h2>5. Key Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TVL (current)</td>
+<td>~$60M+</td>
+<td><a href="https://defillama.com/protocol/yo-protocol">DeFiLlama</a></td>
+</tr>
+<tr>
+<td>TVL (peak managed)</td>
+<td>$80M+</td>
+<td><a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></td>
+</tr>
+<tr>
+<td>yoUSD TVL</td>
+<td>~$25M</td>
+<td>DL News</td>
+</tr>
+<tr>
+<td>yoETH TVL</td>
+<td>~$43M</td>
+<td>DL News</td>
+</tr>
+<tr>
+<td>yoBTC TVL</td>
+<td>~$12M</td>
+<td>DL News</td>
+</tr>
+<tr>
+<td>Yield generated (cumulative)</td>
+<td>$2.67M+</td>
+<td>Internal data</td>
+</tr>
+<tr>
+<td>Depositors</td>
+<td>15,000+</td>
+<td>Internal data</td>
+</tr>
+<tr>
+<td>yoUSD annualized return</td>
+<td>8.64% (since inception)</td>
+<td><a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></td>
+</tr>
+<tr>
+<td>yoETH annualized return</td>
+<td>5.33%</td>
+<td>DL News</td>
+</tr>
+<tr>
+<td>Live since</td>
+<td>March 2025</td>
+<td>DL News</td>
+</tr>
+<tr>
+<td>Hacks/Exploits</td>
+<td>None</td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<h3>Performance (yoUSD)</h3>
+<ul>
+<li><strong>8.64% annualized since inception</strong> — near-zero volatility, no negative months</li>
+<li>Outperforms 3-month T-bill benchmark by 4.64%</li>
+<li>Current headline APY ~19% includes temporary 14% YO rewards</li>
+<li><strong>Organic APY (post-rewards): ~5-9%</strong> — this is the sustainable rate</li>
+</ul>
+<p>Source: <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></p>
+<hr>
+<h2>6. Tokenomics (YO)</h2>
+<p><strong>Total Supply:</strong> 1,000,000,000 YO</p>
+<table>
+<thead>
+<tr>
+<th>Allocation</th>
+<th>%</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Community Growth &amp; Future Rewards</td>
+<td>30%</td>
+<td>Ongoing vault rewards</td>
+</tr>
+<tr>
+<td>Core Contributors</td>
+<td>24%</td>
+<td>Team (vesting TBD)</td>
+</tr>
+<tr>
+<td>Ecosystem &amp; Strategic Partnerships</td>
+<td>21.5%</td>
+<td>Growth</td>
+</tr>
+<tr>
+<td>Investors</td>
+<td>16.5%</td>
+<td>Foundation Capital, Coinbase Ventures, etc.</td>
+</tr>
+<tr>
+<td>Genesis Airdrop</td>
+<td>8%</td>
+<td>Claimed Feb 5, 2026</td>
+</tr>
+</tbody></table>
+<p><strong>Launch Mechanics:</strong></p>
+<ul>
+<li>Claims opened February 5, 2026</li>
+<li><strong>Non-transferable initially</strong> — governance-first approach ✅</li>
+<li>Transferability enabled via governance vote later</li>
+<li>14% reward rate across all vaults (2-week launch campaign — temporary)</li>
+</ul>
+<p><strong>Value Accrual:</strong></p>
+<ul>
+<li>Governance token at launch — no revenue sharing yet</li>
+<li>Protocol can charge deposit/withdrawal fees (currently 0%)</li>
+<li>Fee switch + revenue sharing TBD via future governance</li>
+<li>⚠️ 40.5% insider allocation (24% team + 16.5% investors) — monitor vesting</li>
+</ul>
+<p>Source: <a href="https://whales.market/blog/what-is-yo-protocol/">Whales Market</a>, Internal YSL research</p>
+<hr>
+<h2>7. Differentiation vs Competitors</h2>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>TVL</th>
+<th>Chains</th>
+<th>Key Difference</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Yearn</strong></td>
+<td>~$500M</td>
+<td>5+</td>
+<td>Single-chain vaults, oldest yield optimizer</td>
+</tr>
+<tr>
+<td><strong>YO</strong></td>
+<td>~$60M</td>
+<td>3</td>
+<td>Multi-chain + risk-rated via Exponential.fi</td>
+</tr>
+<tr>
+<td><strong>Beefy</strong></td>
+<td>~$300M</td>
+<td>20+</td>
+<td>Wide chain coverage, auto-compounding only</td>
+</tr>
+<tr>
+<td><strong>Sommelier</strong></td>
+<td>~$50M</td>
+<td>2</td>
+<td>Cosmos-based, strategy vaults</td>
+</tr>
+<tr>
+<td><strong>Tokemak</strong></td>
+<td>~$100M</td>
+<td>2</td>
+<td>Liquidity direction, DEX-focused</td>
+</tr>
+</tbody></table>
+<p>YO&#39;s edge: Same team built the risk rating tool (Exponential.fi) they use to select pools. No other optimizer has this integrated risk engine.</p>
+<p>Source: <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></p>
+<hr>
+<h2>8. Risk Assessment</h2>
+<h3>Smart Contract Risk — 4/5</h3>
+<ul>
+<li>3 audits (Offbeat, Hunter, Spearbit) — no critical findings ✅</li>
+<li>ERC-4626 standard (well-tested pattern) ✅</li>
+<li>Auto-pause on significant NAV deviation ✅</li>
+<li>No exploits with $80M+ managed over 1+ year ✅</li>
+<li>Source: <a href="https://docs.yo.xyz/protocol/security-audits">docs.yo.xyz/protocol/security-audits</a></li>
+</ul>
+<h3>Protocol/Operator Risk — 3/5</h3>
+<ul>
+<li>Rebalancing done by <strong>trusted operators</strong> (not decentralized governance yet) ⚠️</li>
+<li>Team selects which protocols to integrate — community input but not binding ⚠️</li>
+<li>Governance activation planned but not yet live</li>
+<li>Withdrawal delay up to 24h if liquidity is insufficient ⚠️</li>
+<li>Source: <a href="https://docs.yo.xyz/protocol/risks">docs.yo.xyz/protocol/risks</a></li>
+</ul>
+<h3>Yield Source / Economic Risk — 3.5/5</h3>
+<ul>
+<li>Real yield from lending + LP fees + yield-bearing tokens ✅</li>
+<li>100+ strategies across 10+ protocols — well diversified ✅</li>
+<li>Tokemak exposure (15.6%) is a concentration risk in a smaller protocol ⚠️</li>
+<li>Ethena (USDe/sUSDe) exposure — carries Ethena-specific risks ⚠️</li>
+<li>Post-incentive organic yield ~5-9% — reasonable and sustainable ✅</li>
+<li>Current 19% includes 14% temporary YO rewards — will drop ⚠️</li>
+</ul>
+<h3>Chain Risk — 4/5</h3>
+<ul>
+<li>Ethereum (70%), Base (27%), Unichain (3%) — mostly blue-chip chains ✅</li>
+<li>Embassy architecture avoids bridge risk ✅</li>
+<li>Source: <a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a></li>
+</ul>
+<h3>Overall Risk Score: 3.6/5</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>4/5</td>
+<td>3 audits, no exploits, ERC-4626</td>
+</tr>
+<tr>
+<td>Protocol/Operator</td>
+<td>3/5</td>
+<td>Centralized operators, governance not live</td>
+</tr>
+<tr>
+<td>Yield Source / Economic</td>
+<td>3.5/5</td>
+<td>Real yield, diversified, but Tokemak + Ethena exposure</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>4/5</td>
+<td>Mostly Ethereum + Base</td>
+</tr>
+<tr>
+<td>Team &amp; Backing</td>
+<td>4/5</td>
+<td>Coinbase Ventures, Foundation Capital, Exponential.fi pedigree</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>3.6/5</strong></td>
+<td>Solid for moderate allocations</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>9. Summary</h2>
+<h3>Strengths</h3>
+<ol>
+<li><strong>Same team as Exponential.fi</strong> — built the risk rating system they use (<a href="https://exponential.fi">exponential.fi</a>)</li>
+<li><strong>Strong backing</strong> — $10M from Foundation Capital + Coinbase Ventures (<a href="https://www.coindesk.com/web3/2025/12/13/yo-labs-raises-usd10m-to-scale-cross-chain-crypto-yield-optimization-protocol">CoinDesk</a>)</li>
+<li><strong>3 clean audits</strong> — Offbeat, Hunter, Spearbit (<a href="https://docs.yo.xyz/protocol/security-audits">docs</a>)</li>
+<li><strong>Real yield</strong> — 8.64% annualized on yoUSD, $2.67M total generated (<a href="https://www.dlnews.com/research/internal/defi-yield-complex-yo-automates-entire-strategy/">DL News</a>)</li>
+<li><strong>100+ strategies, 10+ protocols</strong> — genuine diversification</li>
+<li><strong>Embassy architecture</strong> — avoids bridge risk by holding native assets per chain</li>
+<li><strong>Non-transferable token launch</strong> — shows long-term thinking</li>
+</ol>
+<h3>Weaknesses</h3>
+<ol>
+<li><strong>Operator centralization</strong> — rebalancing relies on trusted operators, not governance</li>
+<li><strong>24h withdrawal delay possible</strong> — liquidity risk in stress scenarios</li>
+<li><strong>Tokemak concentration</strong> (~15.6%) — smaller, less battle-tested protocol</li>
+<li><strong>Ethena exposure</strong> — vault can hold USDe/sUSDe, carries depegging risk</li>
+<li><strong>Token value accrual unclear</strong> — governance token without revenue share yet</li>
+<li><strong>40.5% insider allocation</strong> — team (24%) + investors (16.5%)</li>
+<li><strong>Post-incentive yield drop</strong> — current 19% APY will drop to ~5-9% organic</li>
+</ol>
+<h3>Verdict</h3>
+<p>One of the better yield optimizers for passive stablecoin exposure. The Exponential.fi integration provides genuine risk management that most competitors lack. However, users should understand they&#39;re exposed to 10+ underlying protocols (Pendle, Tokemak, Morpho, Aave, Fluid, IPOR, etc.) and that the current headline APY includes temporary rewards.</p>
+<p><strong>Suitable for:</strong> Moderate allocations. Monitor for governance activation and Tokemak/Ethena exposure.
+<strong>Position sizing:</strong> Don&#39;t treat yoUSD as equivalent to holding USDC — it&#39;s a diversified DeFi yield product with multiple protocol exposures.</p>
+<hr>
+<p><em>Report by GQM Research for Yieldschool</em>
+<em>Sources: yo.xyz docs, Exponential.fi, CoinDesk, DL News, Whales Market, DeFiLlama, Messari</em></p>
+
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;">
+    <p>Generated by Geoff for Yieldschool Research</p>
+</footer>
+</body>
+</html>

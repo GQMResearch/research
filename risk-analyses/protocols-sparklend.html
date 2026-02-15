@@ -1,0 +1,169 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>protocols-sparklend</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>SparkLend (Spark Protocol)</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> Lending Protocol</li>
+<li><strong>Chains:</strong> Ethereum, Gnosis</li>
+<li><strong>TVL:</strong> ~$3B+</li>
+<li><strong>Live Since:</strong> May 2023</li>
+<li><strong>Website:</strong> <a href="https://spark.fi">https://spark.fi</a></li>
+<li><strong>Docs:</strong> <a href="https://docs.spark.fi">https://docs.spark.fi</a></li>
+<li><strong>Parent:</strong> MakerDAO/Sky ecosystem</li>
+</ul>
+<h2>Smart Contract Security</h2>
+<h3>Audits</h3>
+<p>SparkLend is a fork of Aave V3 with MakerDAO integrations:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Auditor</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Aave V3 (base code)</td>
+<td>Multiple (ABDK, Trail of Bits, SigmaPrime, Certora)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Spark-specific modules</td>
+<td>ChainSecurity</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>D3M (DAI Direct Deposit)</td>
+<td>MakerDAO auditors</td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<p>Inherits Aave V3&#39;s extensive audit coverage.</p>
+<h3>Bug Bounty</h3>
+<ul>
+<li><strong>Platform:</strong> Immunefi (via MakerDAO program)</li>
+<li><strong>Status:</strong> Active, significant bounties</li>
+<li><strong>Scope:</strong> Lending contracts, DAI integrations</li>
+</ul>
+<h3>Incidents</h3>
+<ul>
+<li>No major exploits</li>
+<li>Aave V3 (base code) incident-free</li>
+<li>Clean record since launch</li>
+</ul>
+<h3>Upgradeability</h3>
+<ul>
+<li>Governance-controlled via Maker/Sky</li>
+<li>Timelocks on parameter changes</li>
+<li>Emergency module for rapid response</li>
+</ul>
+<h2>Protocol &amp; Team</h2>
+<h3>Team</h3>
+<ul>
+<li>Built by Phoenix Labs (MakerDAO subDAO)</li>
+<li>Experienced team from MakerDAO ecosystem</li>
+<li>Strong backing from Sky/Maker governance</li>
+</ul>
+<h3>Governance</h3>
+<ul>
+<li>Part of MakerDAO/Sky governance</li>
+<li>SubDAO structure</li>
+<li>MKR holders have ultimate control</li>
+</ul>
+<h3>Backing</h3>
+<ul>
+<li>Funded by MakerDAO</li>
+<li>Direct DAI liquidity via D3M</li>
+<li>Sustainable via lending interest</li>
+</ul>
+<h2>Economic Model</h2>
+<h3>Yield Source</h3>
+<ul>
+<li>Lending interest (borrowers pay)</li>
+<li>DAI Savings Rate (DSR) integration</li>
+<li>No token emissions</li>
+</ul>
+<h3>Key Features</h3>
+<ol>
+<li><strong>D3M:</strong> Direct DAI minting into protocol</li>
+<li><strong>DSR Integration:</strong> Deposits can earn DSR</li>
+<li><strong>sDAI:</strong> Yield-bearing DAI wrapper</li>
+<li><strong>Sky Farming:</strong> USDS staking rewards</li>
+</ol>
+<h3>Sustainability</h3>
+<ul>
+<li>Real yield from lending spreads</li>
+<li>DSR funded by Maker protocol revenue</li>
+<li>No inflationary emissions</li>
+</ul>
+<h2>USDS/DAI Integration</h2>
+<h3>What is USDS?</h3>
+<ul>
+<li>USDS is the rebranded DAI (Sky ecosystem)</li>
+<li>Same backing, same stability</li>
+<li>sUSDS = yield-bearing version (like sDAI)</li>
+</ul>
+<h3>Sky Farming Rewards</h3>
+<ul>
+<li>Additional rewards for USDS stakers</li>
+<li>Funded by Sky protocol</li>
+<li>Variable rates based on governance</li>
+</ul>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Smart Contract</td>
+<td>4.5/5</td>
+<td>Aave V3 fork (heavily audited), Maker integration audited</td>
+</tr>
+<tr>
+<td>Protocol/Team</td>
+<td>4.5/5</td>
+<td>MakerDAO backing, experienced team</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>4.5/5</td>
+<td>Real yield, DSR sustainable, Maker backing</td>
+</tr>
+<tr>
+<td>Chain</td>
+<td>5/5</td>
+<td>Ethereum mainnet</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.5/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>SparkLend combines Aave V3&#39;s battle-tested lending infrastructure with MakerDAO&#39;s DAI ecosystem. Strong security inheritance from Aave, plus MakerDAO&#39;s governance and backing. The D3M ensures deep DAI liquidity. One of the safest lending protocols for DAI/USDS yield strategies.</p>
+<h2>References</h2>
+<ul>
+<li>Docs: <a href="https://docs.spark.fi">https://docs.spark.fi</a></li>
+<li>Aave V3 Security: <a href="https://docs.aave.com/developers/deployed-contracts/security-and-audits">https://docs.aave.com/developers/deployed-contracts/security-and-audits</a></li>
+<li>MakerDAO: <a href="https://makerdao.com">https://makerdao.com</a></li>
+</ul>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>chains-arbitrum</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { color: #1a1a1a; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+  h2 { color: #333; margin-top: 30px; }
+  h3 { color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  blockquote { border-left: 4px solid #4CAF50; margin-left: 0; padding-left: 20px; color: #666; }
+  a { color: #1976D2; }
+  hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+  @media print { body { margin: 20px; max-width: none; } }
+</style>
+</head><body><h1>Arbitrum</h1>
+<h2>Overview</h2>
+<ul>
+<li><strong>Type:</strong> Layer 2 (Optimistic Rollup)</li>
+<li><strong>Parent Chain:</strong> Ethereum</li>
+<li><strong>Launched:</strong> August 2021</li>
+<li><strong>Operator:</strong> Offchain Labs</li>
+<li><strong>Website:</strong> <a href="https://arbitrum.io">https://arbitrum.io</a></li>
+<li><strong>Status:</strong> Leading L2 by TVL</li>
+</ul>
+<h2>Security Model</h2>
+<h3>Optimistic Rollup Design</h3>
+<ul>
+<li>Transactions assumed valid unless challenged</li>
+<li>7-day challenge period for withdrawals</li>
+<li>Fraud proofs secure the chain</li>
+<li>Inherits Ethereum security</li>
+</ul>
+<h3>Sequencer</h3>
+<ul>
+<li>Currently centralized sequencer (Offchain Labs)</li>
+<li>Sequencer can censor (temporarily)</li>
+<li>Cannot steal funds</li>
+<li>Decentralization roadmap in progress</li>
+</ul>
+<h3>Fraud Proofs</h3>
+<ul>
+<li>Any validator can challenge invalid state</li>
+<li>7-day window for challenges</li>
+<li>Honest 1-of-N assumption</li>
+</ul>
+<h2>Trust Assumptions</h2>
+<h3>What You Trust</h3>
+<ol>
+<li><strong>Ethereum:</strong> Base layer security</li>
+<li><strong>Fraud Proofs:</strong> At least one honest validator</li>
+<li><strong>Sequencer (soft):</strong> For transaction ordering</li>
+</ol>
+<h3>What You Don&#39;t Need to Trust</h3>
+<ul>
+<li>Sequencer cannot steal funds</li>
+<li>Can always exit to L1 (worst case)</li>
+<li>Ethereum settlement guarantees</li>
+</ul>
+<h2>For DeFi Users</h2>
+<h3>Strengths</h3>
+<ul>
+<li>Low fees (~$0.10-0.50)</li>
+<li>Fast confirmations (~1 second)</li>
+<li>Large ecosystem (GMX, Radiant, etc.)</li>
+<li>$10B+ TVL</li>
+</ul>
+<h3>Considerations</h3>
+<ul>
+<li>Sequencer centralization</li>
+<li>7-day withdrawal delay to L1</li>
+<li>Bridge risk for non-native assets</li>
+</ul>
+<h2>Risk Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Security</td>
+<td>4.5/5</td>
+<td>Ethereum-backed, fraud proofs</td>
+</tr>
+<tr>
+<td>Decentralization</td>
+<td>4/5</td>
+<td>Sequencer centralized, improving</td>
+</tr>
+<tr>
+<td>Track Record</td>
+<td>4.5/5</td>
+<td>3+ years, no major issues</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.5/5</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Summary</h2>
+<p>Arbitrum is the most established L2 with strong security inherited from Ethereum. Centralized sequencer is the main tradeoff, but it cannot steal funds. Excellent for DeFi with mature ecosystem and low fees.</p>
+<h2>References</h2>
+<ul>
+<li>Docs: <a href="https://docs.arbitrum.io">https://docs.arbitrum.io</a></li>
+<li>Bridge: <a href="https://bridge.arbitrum.io">https://bridge.arbitrum.io</a></li>
+<li>L2Beat: <a href="https://l2beat.com/scaling/projects/arbitrum">https://l2beat.com/scaling/projects/arbitrum</a></li>
+</ul>
+</body></html>

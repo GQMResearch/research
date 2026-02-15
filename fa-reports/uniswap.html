@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental Analysis: Uniswap</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --green: #22c55e; --red: #ef4444; --yellow: #eab308; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: white; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary); }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: white; }
+        p { margin: 0.75rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: var(--card); border-radius: 0.5rem; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; background: rgba(0,0,0,0.2); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+        code { background: var(--card); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+        blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; color: var(--muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        strong { color: white; }
+        em { color: var(--muted); }
+        .score-5 { color: var(--green); }
+        .score-4 { color: #4ade80; }
+        .score-3 { color: var(--yellow); }
+        .score-2 { color: var(--red); }
+    </style>
+</head>
+<body>
+<h1>Fundamental Analysis: Uniswap</h1>
+<p><strong>Ticker:</strong> UNI<br><strong>Sector:</strong> DeFi - DEX<br><strong>Analysis Date:</strong> 2026-02-10<br><strong>Analyst:</strong> Aipa (for Yieldschool)</p>
+<hr>
+<h2>1. Official &amp; Core Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Website</td>
+<td><a href="https://uniswap.org">https://uniswap.org</a></td>
+</tr>
+<tr>
+<td>Twitter/X</td>
+<td><a href="https://twitter.com/Uniswap">https://twitter.com/Uniswap</a></td>
+</tr>
+<tr>
+<td>Discord</td>
+<td><a href="https://discord.gg/uniswap">https://discord.gg/uniswap</a></td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a href="https://github.com/Uniswap">https://github.com/Uniswap</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://docs.uniswap.org">https://docs.uniswap.org</a></td>
+</tr>
+<tr>
+<td>CoinGecko</td>
+<td><a href="https://coingecko.com/en/coins/uniswap">https://coingecko.com/en/coins/uniswap</a></td>
+</tr>
+<tr>
+<td>DeFiLlama</td>
+<td><a href="https://defillama.com/protocol/uniswap">https://defillama.com/protocol/uniswap</a></td>
+</tr>
+</tbody></table>
+<h3>Audits</h3>
+<table>
+<thead>
+<tr>
+<th>Auditor</th>
+<th>Scope</th>
+<th>Report</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.openzeppelin.com/">OpenZeppelin</a></td>
+<td>V3, V4</td>
+<td><a href="https://github.com/Uniswap/v3-core/tree/main/audits">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://www.trailofbits.com/">Trail of Bits</a></td>
+<td>V3, V4</td>
+<td><a href="https://github.com/Uniswap/v3-core/tree/main/audits">GitHub</a></td>
+</tr>
+<tr>
+<td><a href="https://abdk.consulting/">ABDK</a></td>
+<td>V3</td>
+<td><a href="https://github.com/Uniswap/v3-core/tree/main/audits">GitHub</a></td>
+</tr>
+<tr>
+<td>Code4rena</td>
+<td>V4 Hooks</td>
+<td>Competition</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. Project Overview</h2>
+<h3>What It Does</h3>
+<p>Uniswap is the largest decentralized exchange by volume, pioneering the automated market maker (AMM) model. Now on V4 with customizable hooks.</p>
+<h3>Key Versions</h3>
+<ul>
+<li><strong>V1</strong> (2018) — Original AMM</li>
+<li><strong>V2</strong> (2020) — ERC20/ERC20 pairs</li>
+<li><strong>V3</strong> (2021) — Concentrated liquidity</li>
+<li><strong>V4</strong> (2024) — Hooks, singleton architecture</li>
+</ul>
+<h3>Team</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Background</th>
+<th>Doxxed?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Founder/CEO</td>
+<td><a href="https://www.crunchbase.com/person/hayden-adams">Hayden Adams</a></td>
+<td>Invented Uniswap, former mechanical engineer</td>
+<td>✅ Yes</td>
+</tr>
+</tbody></table>
+<p><strong>Track Record:</strong> Created the AMM model that spawned an entire DeFi sector. $2.75T+ cumulative volume.</p>
+<h3>Sector &amp; Competition</h3>
+<p><strong>Category:</strong> DEX<br><strong>TVL:</strong> ~$3B+</p>
+<p><strong>Main Competitors:</strong></p>
+<ul>
+<li>Curve (stablecoins)</li>
+<li>SushiSwap (fork)</li>
+<li>PancakeSwap (BSC)</li>
+<li>Aerodrome (Base)</li>
+</ul>
+<hr>
+<h2>3. Tokenomics</h2>
+<p><strong>Supply:</strong></p>
+<ul>
+<li>Max Supply: 1B UNI</li>
+<li>Circulating: ~600M</li>
+</ul>
+<p><strong>Value Accrual:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Status</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fee switch</td>
+<td>⚠️ OFF</td>
+<td>Governance can activate</td>
+</tr>
+<tr>
+<td>Protocol fees</td>
+<td>⚠️ PENDING</td>
+<td>V4 enables protocol fees</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>✅ ACTIVE</td>
+<td>Treasury + protocol decisions</td>
+</tr>
+</tbody></table>
+<p><strong>Note:</strong> Like Morpho, Uniswap has not activated its fee switch. This is a growth-first strategy with future revenue upside.</p>
+<hr>
+<h2>4. Financials</h2>
+<h3>Key Metrics</h3>
+<ul>
+<li><strong>TVL:</strong> $3B+</li>
+<li><strong>Cumulative Volume:</strong> $2.75T+</li>
+<li><strong>Daily Volume:</strong> $1-5B</li>
+<li><strong>Protocol Revenue:</strong> $0 (fee switch off)</li>
+</ul>
+<h3>Funding</h3>
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Date</th>
+<th>Amount</th>
+<th>Lead</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Seed</td>
+<td>2019</td>
+<td>$1M</td>
+<td>Paradigm</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniswap">Wikipedia</a></td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2020</td>
+<td>$11M</td>
+<td>a16z</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniswap">Wikipedia</a></td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>Oct 2022</td>
+<td>$165M</td>
+<td>Polychain</td>
+<td><a href="https://cryptonews.com/news/uniswap-labs-raises-165-million-reaching-16-billion-valuation/">CryptoNews</a></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>$177M+</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>Notable Backers</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Uniswap">a16z</a> — Series A, B</li>
+<li><a href="https://en.wikipedia.org/wiki/Uniswap">Paradigm</a> — Seed, Series B</li>
+<li><a href="https://cryptonews.com/news/uniswap-labs-raises-165-million-reaching-16-billion-valuation/">Polychain Capital</a> — Series B lead</li>
+<li><a href="https://cryptonews.com/news/uniswap-labs-raises-165-million-reaching-16-billion-valuation/">Variant</a> — Series B</li>
+</ul>
+<hr>
+<h2>5. Security</h2>
+<h3>Risk Assessment</h3>
+<p><strong>Overall Risk Score: 5/5</strong> (Minimal Risk)</p>
+<ul>
+<li>Most battle-tested DEX in existence</li>
+<li>Multiple audits per version</li>
+<li>Bug bounty program</li>
+<li>No major exploits to core contracts</li>
+<li>Open source, extensively reviewed</li>
+</ul>
+<hr>
+<h2>6. Summary</h2>
+<h3>Strengths</h3>
+<ol>
+<li><strong>Dominant market position</strong> — largest DEX</li>
+<li><strong>V4 innovation</strong> — hooks enable infinite customization</li>
+<li><strong>Tier-1 backing</strong> — a16z, Paradigm, Polychain</li>
+<li><strong>Best-in-class security</strong> — battle-tested</li>
+<li><strong>Fee switch upside</strong> — future revenue potential</li>
+</ol>
+<h3>Weaknesses</h3>
+<ol>
+<li><strong>No protocol revenue</strong> currently</li>
+<li><strong>Token underperforms</strong> vs protocol usage</li>
+<li><strong>Competition</strong> increasing</li>
+<li><strong>Regulatory scrutiny</strong> (SEC investigation)</li>
+</ol>
+<h3>Final Rating</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Score (1-5)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Team</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tokenomics</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>4.7/5</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Report generated by Geoff for Yieldschool Research</em></p>
+
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;">
+    <p>Generated by Geoff for Yieldschool Research</p>
+</footer>
+</body>
+</html>

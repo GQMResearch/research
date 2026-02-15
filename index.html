@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GQM Research</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+  h1 { color: #58a6ff; margin-bottom: 0.5rem; font-size: 2rem; }
+  h2 { color: #58a6ff; margin: 2rem 0 1rem; font-size: 1.4rem; border-bottom: 1px solid #21262d; padding-bottom: 0.5rem; }
+  .subtitle { color: #8b949e; margin-bottom: 2rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1.2rem; transition: border-color 0.2s; }
+  .card:hover { border-color: #58a6ff; }
+  .card a { color: #58a6ff; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+  .card a:hover { text-decoration: underline; }
+  .card .meta { color: #8b949e; font-size: 0.85rem; margin-top: 0.4rem; }
+  .tag { display: inline-block; background: #21262d; color: #8b949e; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-right: 4px; }
+  .tag.green { background: #0d3321; color: #3fb950; }
+  .tag.yellow { background: #3d2e00; color: #d29922; }
+  .tag.blue { background: #0c2d6b; color: #58a6ff; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #21262d; color: #484f58; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>📊 GQM Research</h1>
+<p class="subtitle">DeFi & Macro Analysis for Yieldschool</p>
+
+<h2>Fundamental Analysis Reports</h2>
+<div class="grid">
+  <div class="card">
+    <a href="fa-reports/yo-protocol.html">YO Protocol</a>
+    <div class="meta">Yield Optimizer — Multi-chain, risk-adjusted yield</div>
+    <div class="meta"><span class="tag blue">Base</span><span class="tag blue">Ethereum</span><span class="tag green">3.7/5</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/morpho.html">Morpho</a>
+    <div class="meta">Lending — Optimized lending/borrowing rates</div>
+    <div class="meta"><span class="tag blue">Ethereum</span><span class="tag blue">Base</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/pendle.html">Pendle</a>
+    <div class="meta">Yield Trading — Fixed yield via PT/YT</div>
+    <div class="meta"><span class="tag blue">Ethereum</span><span class="tag blue">Arbitrum</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/aerodrome.html">Aerodrome</a>
+    <div class="meta">DEX — Base chain concentrated liquidity</div>
+    <div class="meta"><span class="tag blue">Base</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/curve.html">Curve Finance</a>
+    <div class="meta">DEX — Stablecoin & pegged asset swaps</div>
+    <div class="meta"><span class="tag blue">Multi-chain</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/sparklend.html">SparkLend</a>
+    <div class="meta">Lending — MakerDAO ecosystem</div>
+    <div class="meta"><span class="tag blue">Ethereum</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/uniswap.html">Uniswap</a>
+    <div class="meta">DEX — Largest decentralized exchange</div>
+    <div class="meta"><span class="tag blue">Multi-chain</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/silicon-network.html">Silicon Network</a>
+    <div class="meta">RWA — Tokenized GPU infrastructure</div>
+    <div class="meta"><span class="tag yellow">Newer</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/stakedao.html">Stake DAO</a>
+    <div class="meta">Yield — Curve/Convex meta-governance</div>
+    <div class="meta"><span class="tag blue">Ethereum</span></div>
+  </div>
+  <div class="card">
+    <a href="fa-reports/merkl.html">Merkl</a>
+    <div class="meta">Incentives — Protocol reward distribution</div>
+    <div class="meta"><span class="tag blue">Multi-chain</span></div>
+  </div>
+</div>
+
+<h2>Risk Analyses</h2>
+
+<h3 style="color:#c9d1d9; margin: 1rem 0 0.5rem; font-size: 1.1rem;">Protocols</h3>
+<div class="grid">
+  <div class="card"><a href="risk-analyses/protocols-aerodrome.html">Aerodrome</a></div>
+  <div class="card"><a href="risk-analyses/protocols-curve.html">Curve</a></div>
+  <div class="card"><a href="risk-analyses/protocols-merkl.html">Merkl</a></div>
+  <div class="card"><a href="risk-analyses/protocols-pendle.html">Pendle</a></div>
+  <div class="card"><a href="risk-analyses/protocols-sparklend.html">SparkLend</a></div>
+  <div class="card"><a href="risk-analyses/protocols-stakedao.html">Stake DAO</a></div>
+  <div class="card"><a href="risk-analyses/protocols-uniswap.html">Uniswap</a></div>
+  <div class="card"><a href="risk-analyses/protocols-yo-protocol.html">YO Protocol</a></div>
+</div>
+
+<h3 style="color:#c9d1d9; margin: 1rem 0 0.5rem; font-size: 1.1rem;">Stablecoins</h3>
+<div class="grid">
+  <div class="card"><a href="risk-analyses/stablecoins-usdc.html">USDC</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-usdt.html">USDT</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-usde.html">USDe (Ethena)</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-dai-usds.html">DAI / USDS</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-pyusd.html">PYUSD</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-crvusd.html">crvUSD</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-frxusd.html">frxUSD</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-msusd.html">msUSD</a></div>
+  <div class="card"><a href="risk-analyses/stablecoins-pmusd.html">pmUSD</a></div>
+</div>
+
+<h3 style="color:#c9d1d9; margin: 1rem 0 0.5rem; font-size: 1.1rem;">Chains & Assets</h3>
+<div class="grid">
+  <div class="card"><a href="risk-analyses/chains-ethereum.html">Ethereum</a></div>
+  <div class="card"><a href="risk-analyses/chains-base.html">Base</a></div>
+  <div class="card"><a href="risk-analyses/chains-arbitrum.html">Arbitrum</a></div>
+  <div class="card"><a href="risk-analyses/chains-sonic.html">Sonic</a></div>
+  <div class="card"><a href="risk-analyses/assets-wrapped-btc.html">Wrapped BTC</a></div>
+  <div class="card"><a href="risk-analyses/assets-gold-tokens.html">Gold Tokens</a></div>
+</div>
+
+<footer>
+  GQM Research for Yieldschool · Updated February 2026
+</footer>
+
+</body>
+</html>
